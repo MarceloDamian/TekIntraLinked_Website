@@ -1,0 +1,89 @@
+h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5%;
+}
+
+/* ------------------------------------------------ */
+
+.FormtoSend
+{
+    background: linear-gradient(0.25turn, #30677e, #7c8d8d, #4872a0);
+    /* background: linear-gradient(217deg,rgb(110, 130, 169), rgba(89, 194, 233, 0.7)); */
+    display: flex;
+    /* justify-content: center; */
+    width:100vw;
+    min-height: 100vh;
+}
+
+.Bubble
+{
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 200cm;
+    outline: none;
+    border: none;
+    background-color: rgb(239, 239, 226);
+}
+.Rectangletxtbox
+{
+    font-size: 20px;
+    padding: 8px;
+    width:40vw;
+    outline: none;
+    border: none;
+    background-color: rgb(239, 239, 226);
+
+}
+th
+{
+    padding-top: 10%;
+    height: 1cm;
+    font-size: 50px;
+}
+h3
+{
+    padding-bottom: .5cm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+
+}
+
+input::placeholder{
+    font-family:initial;
+}
+textarea::placeholder
+{
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* all the same at the bottom but not condensed in case i have to move them */
+.Move-LeftTxtbox
+{
+    /* border: 0.01cm solid  rgb(147, 176, 202); */
+    padding-top:5%;
+    padding-left:10%;
+    height: 3cm;
+    width: 50vw;
+}
+.Move-Name
+{
+    /* border: 0.01cm solid  rgb(147, 176, 202); */
+    padding-left:10%;
+    height: 2.5cm;
+    /* width: 50vw; */
+}
+.Move-Email
+{
+    /* border: 0.01cm solid  rgb(147, 176, 202); */
+    padding-left:10%;
+    height: 2.5cm;
+    /* width: 50vw; */
+}
+.Move-Message
+{
+    padding-left:10%;
+    height: 9.5cm;
+    /* height:1cm; */
+    width: 50vw;
+}
