@@ -14,8 +14,7 @@ import './App.css';
 
 // import SignUp from './components/SignUp';
 import ContactUs from './pages/ContactUs';
-
-import Demos from './components/Demos';
+import Portfolio_ from './pages/Portfolio_';
 
 
 // import FirstDemo from './pages/Portfolio/FirstDemo';
@@ -40,7 +39,7 @@ function App() {
           <Routes>
             <Route path='' exact element={<Home/>} />
             <Route path='/ContactUs' element={<ContactUs/>} />
-            <Route path='/Portfolio' element={<Demos/>} />
+            <Route path='/Portfolio' element={<Portfolio_/>} />
 
           </Routes>
         <BottomFooter/>

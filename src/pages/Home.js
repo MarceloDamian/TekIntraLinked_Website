@@ -1,16 +1,21 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import '../App.css';
 import Tech from '../components/Tech';
-import HeroSection from '../components/HeroSection';
+import Main_Section from '../components/Main_Section';
 import TopFooter from '../components/TopFooter';
 
 
 // import BottomFooter from '../components/BottomFooter';
 
-function Home() {
+const Home = () => {
+
+  useEffect(() => { 
+    window.scrollTo(0, 0)
+  }, []);// Empty dependency array
+
   return (
     <>
-      <HeroSection />
+      <Main_Section/>
       <Tech />
       <TopFooter />
       {/* Bottomfooter is in app js */}

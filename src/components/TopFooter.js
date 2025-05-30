@@ -1,33 +1,20 @@
 import React from 'react';
-import './TopFooter.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import SubscriptionSection from './SubscriptionSection';
+import './TopFooter.css';
 
-function TopFooter() 
+const TopFooter = () =>
 {
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Not seeing what you looked for? Shoot me an email!
-        </p>
-        {/* <p className='footer-subscription-text'>
-        </p> */}
-        
-          <div >
-            <Button
-              className='btns'
-              buttonStyle='btn--outline'
-              buttonSize='btn--medium'
-            >
-            Lets get in touch !
-            </Button>
-            {/* MOVE BUTTON TO THE BOTTOM AFTER THEY HAVE ALREADY VIEWED */}
-          </div>
-          <p className='footer-subscription-heading'>
-            Newsletter : (Enter Email here)
-          </p>
-      </section>
+    <div className='.footer-container'>
+      <SubscriptionSection
+        header="Get In Touch!"
+        buttonText="Let's get in touch!"
+        buttonStyle='btn--outline'
+        buttonSize='btn--medium'
+        footer= "Subscribe to My Newsletter : " 
+      />
     </div>
   );
 }

@@ -1,44 +1,34 @@
 
 
-import React, { Children } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Demo.css';
 
 
-
-function DemoIcon(props) 
+const DemoIcon = ({icon, label, path, headerText, footerText}) =>
 {
   return (
     <>
-
-      <li className='Demo__item'>
-        
-        <Link className='Demo__item__link' to={props.path} >
-         
-          <figure className='Demo__item__pic-wrap' data-category={props.label}/>
-            
-            {props.data}
-              {/* <img
-                  className='Demo__item__img'
-                  // alt='Travel Image'
-                  src="images/WEBSITEIMG.png"
-                  // src= {props.src}
-                  // src={<FaPython/>}
-              />  */}
-            {/* </figure> */}
-
-
-          
-          <div className='Demo__item__info'>
-
-            <h5 className='Demo__item__text'>{props.text}</h5>
-
-          </div>
-
-        </Link>
-      </li>
+      <h1>{headerText}</h1>
+        <li className='Demo__item'>
+          <Link className='Demo__item__link' to={path} >
+            <figure className='Demo__item__pic-wrap' data-category={label}/>
+              {icon}
+          </Link>
+        </li>
+      <h4>{footerText}</h4>
     </>
   );
-}
+};
+
+DemoIcon.propTypes = 
+{
+  icon: PropTypes.element.isRequired,
+  label: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  headerText: PropTypes.string.isRequired,
+  footerText: PropTypes.string.isRequired,
+};
 
 export default DemoIcon;
