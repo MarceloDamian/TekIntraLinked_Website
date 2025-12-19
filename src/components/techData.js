@@ -6,60 +6,62 @@ import { IoLogoReact } from "react-icons/io5";
 
 const techData = [
   {
-    icon: <FaPython size={175} color="black" />,
+    icon: <FaPython size={150} color="white" />,
     label: "PYTHON",
     path: "/Portfolio",
   },
   {
-    icon: <SiCplusplus size={175} color="black" />,
+    icon: <SiCplusplus size={150} color="white" />,
     label: "C++",
     path: "/Portfolio",
   },
   {
-    icon: <IoLogoReact size={175} color="black" />,
+    icon: <IoLogoReact size={150} color="white" />,
     label: "REACT",
     path: "/Portfolio",
   },
   {
-    icon: <SiDart size={175} color="black" />,
+    icon: <SiDart size={150} color="black" />,
     label: "DART",
     path: "/Portfolio",
   },
   {
-    icon: <VscTerminalBash size={175} color="black" />,
+    icon: <VscTerminalBash size={150} color="black" />,
     label: "BASH",
     path: "/Portfolio",
   },
   {
-    icon: <IoLogoJavascript size={175} color="black" />,
+    icon: <IoLogoJavascript size={150} color="black" />,
     label: "JAVASCRIPT",
     path: "/Portfolio",
   },
   {
-    icon: <FaSwift size={175} color="black" />,
+    icon: <FaSwift size={150} color="black" />,
     label: "SWIFT",
     path: "/Portfolio",
   },
   {
-    icon: <FaHtml5 size={175} color="black" />,
+    icon: <FaHtml5 size={150} color="black" />,
     label: "HTML",
     path: "/Portfolio",
   },
   {
-    icon: <FaCss3Alt size={175} color="black" />,
+    icon: <FaCss3Alt size={150} color="black" />,
     label: "CSS",
     path: "/Portfolio",
   },
-  {
-    icon: <img src={`images/MIPSLOGO.png`} height="200cm" width="200cm" />,
-    label: "MIPS",
-    path: "/Portfolio",
-  },
-  {
-    icon: <img src={`images/PerlTransparentLogo.png`} height="150cm" width="200cm"/>,
-    label: "PERL",
-    path: "/Portfolio",
-  },
+  // {
+  //   icon: <img src={`images/MIPSLOGO.png`} height="150cm" width="200cm" />,
+  //   label: "MIPS",
+  //   path: "/Portfolio",
+  // },
+  // {
+  //   icon: <img src={`images/PerlTransparentLogo.png`} height="150cm" width="200cm"/>,
+  //   label: "PERL",
+  //   path: "/Portfolio",
+  // },
+  // I have decided to not include these in my portfolio. They dont
+  // add much value to the portfolio and I dont want to include them.
 ];
 
 export default techData;

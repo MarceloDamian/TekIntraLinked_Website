@@ -17,14 +17,10 @@ const TechIcon = ({icon, label, path, text=''}) =>
         {/* Tech_item seperates each icon by a gap. */}
         
         <Link className='tech__item__link' to={path} >
-          {/* <FaPython size={200} color='black'/> */}
 
-          <figure className='tech__item__pic-wrap' data-category={label} />
+          <figure className='tech__item__pic-wrap' data-category={label}>
             {icon}
-
-          <div className='tech__item__info'>
-            <h5 className='tech__item__text'> {text} </h5>
-          </div>
+          </figure>
 
         </Link>
 
@@ -39,7 +35,6 @@ TechIcon.propTypes =
   icon: PropTypes.element.isRequired,
   label: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
-  text: PropTypes.string,
 };
 
 
