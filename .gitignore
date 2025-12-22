@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# Local env files
+.env.local
+
+# IDE files
+.vscode/
+.DS_Store
