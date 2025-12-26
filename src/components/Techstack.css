@@ -10,27 +10,23 @@
 .tech h1 {
   margin-bottom: 50px;
   font-size: 75px;
+  color:antiquewhite;
 }
 
 .tech__item {
-  /* display: flex;
-  flex: 1 1 300px; */
   margin: 0 2rem 0rem 3rem;
-  /* border-radius: 10px;
-  max-width: 400px; */
 }
 
 .tech__item__link {
   display: flex;
   flex-flow: row;
-  width: 90%;
+  width: 100%;
   margin-left: 0px;
   height: 12rem;
   box-shadow: 0 6px 20px rgba(56, 126, 255, 0.333);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: #97a3bf86;
   align-items: center;
-  padding-left: 10%;
 
   /* text-decoration: none; */
   /* overflow: hidden; */
@@ -45,6 +41,8 @@
 .tech__item__pic-wrap {
   position: relative;
   width: 100%;
+  padding-left: 10%;
+  padding-right: 15%;
 }
 
 .tech__item__pic-wrap::after {
@@ -53,17 +51,17 @@
   position: absolute;
 
   /* Switched to rem unit and positioned with left/right for robustness */
-  bottom: -3.1rem;
-  left: -1.4rem;
+  bottom: -3.2rem;
+  left: 0rem;
   right: 0rem;
   padding: 6px 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
 
 
   /* Used rem for scalable font size */
   font-weight: 700;
   color: #ffffff;
-  background-color: #1f31678a;
+  background-color: #162a6b7a;
   box-sizing: border-box;
   text-align: center;
   border-radius: 4px;

@@ -6,47 +6,47 @@ import { IoLogoReact } from "react-icons/io5";
 
 const techData = [
   {
-    icon: <FaPython size={150} color="white" />,
+    icon: <FaPython size={150} color="rgb(243, 237, 229)"/>,
     label: "PYTHON",
     path: "/Portfolio",
   },
   {
-    icon: <SiCplusplus size={150} color="white" />,
+    icon: <SiCplusplus size={150} color="rgb(243, 237, 229)" />,
     label: "C++",
     path: "/Portfolio",
   },
   {
-    icon: <IoLogoReact size={150} color="white" />,
+    icon: <IoLogoReact size={150} color="rgb(243, 237, 229)" />,
     label: "REACT",
     path: "/Portfolio",
   },
   {
-    icon: <SiDart size={150} color="black" />,
+    icon: <SiDart size={150} color="rgb(243, 237, 229)" />,
     label: "DART",
     path: "/Portfolio",
   },
   {
-    icon: <VscTerminalBash size={150} color="black" />,
+    icon: <VscTerminalBash size={150} color="rgb(243, 237, 229)" />,
     label: "BASH",
     path: "/Portfolio",
   },
   {
-    icon: <IoLogoJavascript size={150} color="black" />,
+    icon: <IoLogoJavascript size={150} color="rgb(243, 237, 229)" />,
     label: "JAVASCRIPT",
     path: "/Portfolio",
   },
   {
-    icon: <FaSwift size={150} color="black" />,
+    icon: <FaSwift size={150} color="rgb(243, 237, 229)" />,
     label: "SWIFT",
     path: "/Portfolio",
   },
   {
-    icon: <FaHtml5 size={150} color="black" />,
+    icon: <FaHtml5 size={150} color="rgb(243, 237, 229)" />,
     label: "HTML",
     path: "/Portfolio",
   },
   {
-    icon: <FaCss3Alt size={150} color="black" />,
+    icon: <FaCss3Alt size={150} color="rgb(243, 237, 229)" />,
     label: "CSS",
     path: "/Portfolio",
   },

@@ -14,8 +14,7 @@ const ContactInfo = () => (
           className="social-icon-link github"
           to="https://github.com/MarceloDamian?tab=repositories"
         >
-          <FaGithub color="#87CEFA" size={22} />
-          Github |{" "}
+          <FaGithub color="#87CEFA" size={22} /> Github |{" "}
         </Link>
       }
       {

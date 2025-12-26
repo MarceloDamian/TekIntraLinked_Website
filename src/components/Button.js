@@ -6,8 +6,12 @@ import PropTypes from 'prop-types';
 
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
-const SIZES = ['btn--medium', 'btn--large'];
+// const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+
+const STYLES = ['btn--outline'];
+const SIZES = ['btn--medium', 'btn--Large'];
+
+
 
 const getButtonStyle = (buttonStyle) => 
 {
@@ -26,16 +30,13 @@ buttonStyle = STYLES[0], buttonSize = SIZES[0], linkTo = '/ContactUs'}) =>
   const size = getButtonSize(buttonSize);
 
   return (
-    <Link to={linkTo} className='btn-mobile'>
-
-      <button
-        className={`btn ${style} ${size}`}
-        onClick={onClick}
-        type={type}
-      >
+    // <Link to={linkTo} className="btn-mobile">
+    <Link to={linkTo}>
+      {/* Not sure if this is the correct way to do this, but it works. */}
+      <button className={`btn ${style} ${size}`} onClick={onClick} type={type}>
         {children}
+        {console.log(children)}
       </button>
-      
     </Link>
   );
 };

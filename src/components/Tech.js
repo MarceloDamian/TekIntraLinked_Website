@@ -41,7 +41,7 @@ const Tech = () => {
         {/* Seperate these Portfolio based on skill // Web dev // AI machine learning // Mobile app (Full Stack) */}
         <Swiper
           slidesOffsetBefore={15}
-          slidesPerView={1}
+          slidesPerView={2}
           spaceBetween={-30}
           centeredSlides={false}
           autoplay={{
