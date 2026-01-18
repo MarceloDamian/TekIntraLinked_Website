@@ -1,5 +1,8 @@
 # Dependency directories
 node_modules/
+node_modules/.cache/
+node_modules/@next/swc-darwin-x64/
+public/videos/
 
 # Local env files
 .env.local
