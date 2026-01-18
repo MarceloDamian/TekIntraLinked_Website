@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 :root {
@@ -12,6 +13,24 @@
 
 .footer-container 
 {
+=======
+:root {
+  /* For debugging purposes */
+  /* --primary-color: #225478d4;  */
+  
+  /* This is the actual primary color  */  
+  --primary-color: #041d2fd4; 
+  --text-color: #fff;
+  --font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+
+  --footer-link-margin: 0px 10px 0px 10px;
+  --footer-link-text-font-size: 24px;
+}
+
+.footer-container {
+>>>>>>> Current-Copy
   background-color: var(--primary-color);
   padding: var(--footer-padding);
   display: flex;
@@ -25,16 +44,24 @@
   align-items: flex-start; */
 }
 
+<<<<<<< HEAD
 .footer-links  {
+=======
+.footer-links {
+>>>>>>> Current-Copy
   width: 100%;
   display: flex;
   justify-content: center;
 }
+<<<<<<< HEAD
   
 .footer-link-wrapper  
 {
   display: flex;
 }
+=======
+
+>>>>>>> Current-Copy
 
 .footer-link-items h3 {
   margin: var(--footer-link-margin);
@@ -42,6 +69,7 @@
   font-size: clamp(18px, 3vw, 23px); /* Min 12px, preferred 4vw, max 20px */
   color: var(--text-color);
 }
+<<<<<<< HEAD
 .footer-link-items  a {
 color: var(--footer-text-color);
 text-decoration: none;
@@ -60,3 +88,19 @@ transition: 0.3s ease-out;
       flex-direction: column;
   }
 }
+=======
+.footer-link-items a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+.footer-link-items a:hover {
+  color: var(--footer-hover-color);
+  transition: 0.3s ease-out;
+}
+
+/* Responsive Design */
+/* @media screen and (max-width: 820px) {
+
+} */
+>>>>>>> Current-Copy

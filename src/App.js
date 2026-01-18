@@ -49,6 +49,13 @@ function App() {
 }
 
 export default App;
+<<<<<<< HEAD
+=======
+
+// Complete Website
+// Delete useless code. 
+// Refactor code and make more efficently. ( Optimize )
+>>>>>>> Current-Copy
  
 // MAIN PAGE (Where all edits will occur): 
   // have a Techstack: like the website joshbe.me that has the logos and techstack

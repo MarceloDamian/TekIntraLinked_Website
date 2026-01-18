@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from './Button';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import './SubscriptionSection.css';
 
 const SubscriptionSection = ({ header, buttonText, buttonStyle='btn--primary', buttonSize='btn--medium', footer }) => (
@@ -33,6 +34,47 @@ const SubscriptionSection = ({ header, buttonText, buttonStyle='btn--primary', b
           // onChange={(e) => setEmail(e.target.value) }
         />
       <button>Send Email</button>
+=======
+import './TopFooter.css';
+
+const SubscriptionSection = ({
+  header,
+  buttonText,
+  buttonStyle,
+  buttonSize,
+  footer,
+}) => (
+  <section className="footer-subscription">
+    {/* <p className='footer-subscription-heading'>
+      {header}
+    </p> */}
+
+    <div className="footer-button-div">
+      <Button buttonStyle={buttonStyle} buttonSize={buttonSize}>
+        {(buttonText = "Let's Chat")}
+      </Button>
+    </div>
+
+    <p className="footer-subscription-heading"> {footer}</p>
+    
+    <div className="footer-subscription-input">
+
+      <input
+        className="input--resume"
+        type="Email"
+        placeholder="Your Email"
+        // value = {email}
+        // onChange={(e) => setEmail(e.target.value) }
+      />
+
+      {/* <div className="footer-subscription-button-div"> */}
+        <Button buttonStyle={buttonStyle} buttonSize={"btn--Large"}>
+          {" "}
+          {(buttonText = "Send It Now")}
+        </Button>
+      {/* </div> */}
+
+>>>>>>> Current-Copy
     </div>
 
   </section>

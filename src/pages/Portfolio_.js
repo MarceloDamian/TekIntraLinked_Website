@@ -1,8 +1,13 @@
 
 import {React, useEffect} from 'react';
 import DemoIcon from '../components/DemoIcon';
+<<<<<<< HEAD
 
 import DemoData from '../components/DemoData';
+=======
+import DemoData from '../components/DemoData';
+import "./../components/Demo.css";
+>>>>>>> Current-Copy
 
 
 // TODO: Possibly use MouseWheel Control from swiperjs.com 
@@ -22,6 +27,10 @@ const PortfolioSections = ({ FullSet }) => (
       FullSet.map((demo, index) => (
         <DemoIcon
           key={index}
+<<<<<<< HEAD
+=======
+          index={index}
+>>>>>>> Current-Copy
           icon={demo.icon}
           label={demo.label}
           path={demo.path}
@@ -40,6 +49,7 @@ const Portfolio_= () =>
     window.scrollTo(0, 0) 
   });
   
+<<<<<<< HEAD
   let StartSubset = DemoData.slice(0,3);
   let EndingSubset = DemoData.slice(3,11);
 
@@ -56,6 +66,12 @@ const Portfolio_= () =>
           </div>
         </ul>
 
+=======
+  return (
+    <div className='Demo'>
+      <div className='Demo__container'>
+          <PortfolioSections FullSet={DemoData} />
+>>>>>>> Current-Copy
       </div>
     </div>
   );
