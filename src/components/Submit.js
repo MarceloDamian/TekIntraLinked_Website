@@ -16,7 +16,7 @@ import ContactUsOk from '../pages/StaticContactUs';
     return (      
 
           <button
-            className={`btn--outline btn--medium btn--small`}
+            className={`btn--outline btn--medium`}
             type={type}
           >
             {children}

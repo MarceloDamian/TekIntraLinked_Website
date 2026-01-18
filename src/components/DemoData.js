@@ -1,18 +1,24 @@
 
 import { IoLogoReact } from "react-icons/io5";
+import './Demo.css';
 
 
 const DemoData = [
 {   
     headerText:"TEKINTRALINKED",
-    icon:<img className='Demo__item__img' src="images/WEBSITEIMG.png"/>,
+    icon: (<video className='Demo__item__img' autoPlay loop muted playsInline>
+        <source src="videos/DemoVideo.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+        </video>
+    ),
+    // probably change this to video. 
     label:'This is the Label',
     path:'../Portfolio/FirstDemo',
-    footerText:"--------------------- Under Construction 👷‍♂️ 🧱 🚧 🚧 ----------------------------",
+    footerText:"",
 },
 {    
     headerText:"ParkerUp",
-    icon:<IoLogoReact size={175} color='turquoise'/>,
+    icon:<IoLogoReact size={130} color='turquoise'/>,
     label:'This is the Label for ParkerUp',
     path:'../Portfolio/SecondDemo',
     footerText:"--------------------- Under Construction 👷‍♂️ 🧱 🚧 🚧 ----------------------------",
@@ -31,7 +37,7 @@ const DemoData = [
     icon:<IoLogoReact size={175} color='black'/>,
     // label='RetroWebsite'
     label:'This is the Label for other',
-    path:'../Portfolio/ThirdDemo',
+    path:'../Portfolio/FourthDemo',
     footerText:"Text this way ----------->",
 },
 {
@@ -39,7 +45,7 @@ const DemoData = [
     icon:<IoLogoReact size={175} color='blue'/>,
     // label='RetroWebsite'
     label:'This is the Label for other',
-    path:'../Portfolio/ThirdDemo',
+    path:'../Portfolio/FifthDemo',
     footerText:"<--------- Text that way ",
 },
 {
