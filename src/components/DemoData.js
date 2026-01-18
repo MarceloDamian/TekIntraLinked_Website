@@ -1,24 +1,11 @@
 
 import { IoLogoReact } from "react-icons/io5";
-<<<<<<< HEAD
-=======
 import './Demo.css';
->>>>>>> Current-Copy
 
 
 const DemoData = [
 {   
     headerText:"TEKINTRALINKED",
-<<<<<<< HEAD
-    icon:<img className='Demo__item__img' src="images/WEBSITEIMG.png"/>,
-    label:'This is the Label',
-    path:'../Portfolio/FirstDemo',
-    footerText:"--------------------- Under Construction 👷‍♂️ 🧱 🚧 🚧 ----------------------------",
-},
-{    
-    headerText:"ParkerUp",
-    icon:<IoLogoReact size={175} color='turquoise'/>,
-=======
     icon: (<video className='Demo__item__img' autoPlay loop muted playsInline>
         <source src="videos/DemoVideo.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
@@ -32,7 +19,6 @@ const DemoData = [
 {    
     headerText:"ParkerUp",
     icon:<IoLogoReact size={130} color='turquoise'/>,
->>>>>>> Current-Copy
     label:'This is the Label for ParkerUp',
     path:'../Portfolio/SecondDemo',
     footerText:"--------------------- Under Construction 👷‍♂️ 🧱 🚧 🚧 ----------------------------",
@@ -51,11 +37,7 @@ const DemoData = [
     icon:<IoLogoReact size={175} color='black'/>,
     // label='RetroWebsite'
     label:'This is the Label for other',
-<<<<<<< HEAD
-    path:'../Portfolio/ThirdDemo',
-=======
     path:'../Portfolio/FourthDemo',
->>>>>>> Current-Copy
     footerText:"Text this way ----------->",
 },
 {
@@ -63,11 +45,7 @@ const DemoData = [
     icon:<IoLogoReact size={175} color='blue'/>,
     // label='RetroWebsite'
     label:'This is the Label for other',
-<<<<<<< HEAD
-    path:'../Portfolio/ThirdDemo',
-=======
     path:'../Portfolio/FifthDemo',
->>>>>>> Current-Copy
     footerText:"<--------- Text that way ",
 },
 {

@@ -1,46 +1,11 @@
 /* # File: src/components/Techstack.css */
 
-<<<<<<< HEAD
-
 .tech {
-  /* padding: 32px; */
-=======
-.tech {
->>>>>>> Current-Copy
   padding-top: 100px;
   background: #ffffff15;
 }
 
 .tech h1 {
-<<<<<<< HEAD
-  margin-bottom: 50px;
-  font-size: 75px;
-}
-
-.tech__item {
-  /* display: flex;
-  flex: 1 1 300px; */
-  margin: 0 2rem 0rem 3rem;
-  /* border-radius: 10px;
-  max-width: 400px; */
-}
-
-.tech__item__link {
-  display: flex;
-  flex-flow: row;
-  width: 90%;
-  margin-left: 0px;
-  height: 12rem;
-  box-shadow: 0 6px 20px rgba(56, 126, 255, 0.333);
-  border-radius: 10px;
-  background-color: #97a3bf86;
-  align-items: center;
-  padding-left: 10%;
-
-  /* text-decoration: none; */
-  /* overflow: hidden; */
-  transition: transform 0.3s ease;
-=======
   font-size: 75px;
   color: antiquewhite;
   text-align: center;
@@ -99,7 +64,6 @@
   width: 95%;
   margin-left: -0.1rem;
 
->>>>>>> Current-Copy
 }
 
 .tech__item__link:hover {
@@ -109,32 +73,16 @@
 
 .tech__item__pic-wrap {
   position: relative;
-<<<<<<< HEAD
-  width: 100%;
-}
-
-.tech__item__pic-wrap::after {
-
-=======
 
   width: 100%;
   height: 100%;
 }
 
 .tech__item__pic-wrap::after {
->>>>>>> Current-Copy
   content: attr(data-category);
   position: absolute;
 
   /* Switched to rem unit and positioned with left/right for robustness */
-<<<<<<< HEAD
-  bottom: -3.1rem;
-  left: -1.4rem;
-  right: 0rem;
-  padding: 6px 8px;
-  font-size: 1rem;
-
-=======
   bottom: -3.2rem;
   left: -16%;
   right: 0%;
@@ -142,24 +90,10 @@
 
   padding: 6px 8px;
   font-size: 1.1rem;
->>>>>>> Current-Copy
 
   /* Used rem for scalable font size */
   font-weight: 700;
   color: #ffffff;
-<<<<<<< HEAD
-  background-color: #1f31678a;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 4px;
-  /* Added a slight border-radius */
-}
-
-/* .tech__item__info {
-  padding: 10px 20px 100000000px 10px;
-} */
-
-=======
 
   background-color: #162a6ba2;
 
@@ -172,37 +106,19 @@
   /* Added a slight border-radius */
 }
 
->>>>>>> Current-Copy
 /* Adjusting the Swiper container to create space */
 .mySwiper {
   width: 100%;
   height: 350px;
-<<<<<<< HEAD
-  /* margin: 0 auto; */
-
-  /* position: relative; */
-  /* Important for positioning context */
-  /* --- DEBUGGING STYLES --- */
-  /* border: 3px solid limegreen; */
-  /* Added for debugging */
-}
-
-
-=======
   /* border: 3px solid limegreen; */
 }
 
->>>>>>> Current-Copy
 .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Current-Copy
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
   --swiper-navigation-color: #bdc3d2de;
@@ -221,8 +137,6 @@
 
   /* Changed from -50px */
 }
-<<<<<<< HEAD
-=======
 /* Stack vertically on smaller screens */
 @media (max-width: 535px) 
 {
@@ -249,7 +163,6 @@
 
 
 }
->>>>>>> Current-Copy
 
 /* .tech__item__label {
   font-size: 1rem;
@@ -261,8 +174,4 @@
   text-align: center;
   box-sizing: border-box;
   width: 100%;
-<<<<<<< HEAD
 } */
-=======
-} */
->>>>>>> Current-Copy

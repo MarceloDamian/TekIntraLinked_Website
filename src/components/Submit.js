@@ -16,11 +16,7 @@ import ContactUsOk from '../pages/StaticContactUs';
     return (      
 
           <button
-<<<<<<< HEAD
-            className={`btn--outline btn--medium btn--small`}
-=======
             className={`btn--outline btn--medium`}
->>>>>>> Current-Copy
             type={type}
           >
             {children}

@@ -41,13 +41,8 @@ const Tech = () => {
         {/* Seperate these Portfolio based on skill // Web dev // AI machine learning // Mobile app (Full Stack) */}
         <Swiper
           slidesOffsetBefore={15}
-<<<<<<< HEAD
-          slidesPerView={1}
-          spaceBetween={-30}
-=======
           slidesPerView={3}
           spaceBetween={20}
->>>>>>> Current-Copy
           centeredSlides={false}
           autoplay={{
             delay: 2500,
@@ -61,14 +56,11 @@ const Tech = () => {
           className="mySwiper"
           // virtual={true}
           breakpoints={{
-<<<<<<< HEAD
-=======
             0:
             {
               slidesPerView: 2,
               spaceBetween:-10,
             },
->>>>>>> Current-Copy
             640: {
               slidesPerView: 2,
             },

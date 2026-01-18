@@ -4,21 +4,6 @@ import './Main_Section.css';
 
 const Main_Section = ()=>{
   return (
-<<<<<<< HEAD
-    <div className='hero-container'>
-      <video autoPlay loop muted > 
-        <source src="../../videos/Hyperlapse.mp4" type="video/mp4"/>
-      </video>
-      {/* <a target="_blank" href="http://www.videezy.com">Free Stock Footage by Videezy!</a> */}
-      {/* Copyright ^^^^ also buy license */}
-
-      {/*! Change video to something more eye grabbing !! */} 
-      <h1>
-          TekIntraLinked
-      </h1>
-      {/* A transition of someone typing "Hi my name is Erick" */}
-      <p>......................................</p>
-=======
     <div className='Video-Container'>
       <video autoPlay loop muted > 
         <source src="../../videos/HyperLapse.mp4" type="video/mp4"/>
@@ -33,7 +18,6 @@ const Main_Section = ()=>{
       {/* <h1> TekIntraLinked </h1> */}
       {/* A transition of someone typing "Hi my name is Erick" */}
       {/* <p>......................................</p> */}
->>>>>>> Current-Copy
     </div>
   );
 }

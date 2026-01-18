@@ -1,26 +1,14 @@
 
-<<<<<<< HEAD
-
-video {
-=======
 body, html {
   overflow-x: hidden;
 }
 
 .Video-Container video {
   
->>>>>>> Current-Copy
   object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
-<<<<<<< HEAD
-  z-index: -1;
-}
-
-.hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-=======
   top:0;
   left:0;
   z-index: -1;
@@ -30,7 +18,6 @@ body, html {
   /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
   
 
->>>>>>> Current-Copy
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -41,25 +28,6 @@ body, html {
   object-fit: contain;
 }
 
-<<<<<<< HEAD
-
-
-.hero-container > h1 {
-  color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.hero-container > p {
-  margin-top: 8px;
-  color: #fff;
-  font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-
-=======
 .Video-Container > h1 {
   color: #fff;
   font-size: 100px;
@@ -87,50 +55,25 @@ body, html {
   height: 100%; 
   width:100%;
 }
->>>>>>> Current-Copy
 
 .fa-play-circle {
   margin-left: 4px;
 }
 
 @media screen and (max-width: 960px) {
-<<<<<<< HEAD
-  .hero-container > h1 {
-=======
   .Video-Container > h1 {
->>>>>>> Current-Copy
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 768px) {  
-  .hero-container > h1 {
-=======
 @media screen and (max-width: 535px) {
   .Video-Container > h1 {
->>>>>>> Current-Copy
     font-size: 42px;
     margin-top: -100px;
   }
 
-<<<<<<< HEAD
-  .hero-container > p {
-    font-size: 30px;
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-
-  .btn {
-    width: 100vw;
-  }
-=======
   .Video-Container > p {
     font-size: 30px;
   }
->>>>>>> Current-Copy
 }

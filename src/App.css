@@ -6,14 +6,8 @@
   padding: 0;
   font-family: 'PT Sans', sans-serif;
 
-<<<<<<< HEAD
-  /*  added below  */
-  overflow-x: hidden; 
-  overflow-x: clip !important;
-=======
 
 
->>>>>>> Current-Copy
 
 }
 
@@ -21,28 +15,8 @@
 .Portfolio,
 .ContactUs,
 .FirstDemo{
-<<<<<<< HEAD
-  display: flex;
-=======
->>>>>>> Current-Copy
   height: 100vh;
   justify-content: center;
   font-size: 3rem;
 }
 
-<<<<<<< HEAD
-/* .Portfolio { */
-  /* background-image: url(); */
-  /* background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px; 
-}  */
-
-
-/* .sign-up {} */
-/* .ContactUsOk{} */
-=======
-
->>>>>>> Current-Copy
