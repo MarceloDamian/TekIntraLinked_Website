@@ -23,9 +23,11 @@ function SignUp() {
     
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const userID = process.env.REACT_APP_EMAILJS_USER_ID; // use .env variables for this
+    const userID = process.env.REACT_APP_EMAILJS_USER_ID; 
+    // use .env variables for this
 
-    const data = {
+    const data = 
+    {
       service_id: serviceId,
       template_id: templateId,
       user_id: userID,
