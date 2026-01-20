@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import './TopFooter.css';
 
 const SubscriptionSection = ({
-  header,
   buttonText,
   buttonStyle,
   buttonSize,
@@ -49,7 +48,6 @@ const SubscriptionSection = ({
 
 SubscriptionSection.propTypes = {
 
-    header: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     buttonStyle: PropTypes.string,
     buttonSize: PropTypes.string,

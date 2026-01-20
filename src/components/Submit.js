@@ -2,7 +2,6 @@
 import React from 'react';
 import './Button.css';
 import { Link, Route, Routes } from 'react-router-dom';
-import ContactUsOk from '../pages/StaticContactUs';
 
 // children are neccessary because it creates muliple copies with different properties
 // these are parameters passed dependent on the button. 

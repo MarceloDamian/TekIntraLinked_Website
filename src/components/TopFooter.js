@@ -8,8 +8,6 @@ const TopFooter = () => {
   return (
     <>
       <SubscriptionSection
-        // header="Interested In Working With Me ?"
-        // buttonText="Let's Chat"
         buttonText=""
         buttonStyle="btn--outline"
         buttonSize="btn--medium"

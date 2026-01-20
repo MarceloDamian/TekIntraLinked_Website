@@ -1,13 +1,11 @@
-
-
-.FormtoSend video{
+.FormtoSend video {
   position: absolute;
   object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -21,7 +19,6 @@
   /* Rounded corners for softness */
   box-shadow: 0 4px 12px rgba(65, 63, 63, 0.774);
   /* Subtle shadow for depth */
-
 }
 
 .InnerBox {
@@ -45,8 +42,6 @@
   font-size: 450%;
   padding-bottom: 1rem;
   color: #d1cbcb;
-
-
 }
 
 .FormtoSend h3 {
@@ -90,10 +85,28 @@
   align-items: center;
 }
 
+.successMessage{
 
-@media screen and (min-width: 535px) {}
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;    /* vertical center */
+  height: 100vh;          /* full viewport height */
+  text-align: center;     /* center text inside */
+  font-size: 1.0rem;      /* optional font size */
+  background-color: rgba(255, 255, 255, 0.107);
+}
+.successMessage h2
+{
+    color:rgb(227, 236, 243);
+}
 
-@media screen and (max-width: 535px) {}
+@media screen and (min-width: 535px) 
+{
+}
+
+@media screen and (max-width: 535px) 
+{
+}
 
 /* -------------------------------------------------------- */
 

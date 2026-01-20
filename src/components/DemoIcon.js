@@ -11,7 +11,7 @@ const DemoIcon = ({index, icon, label, path, headerText, footerText}) =>
   const alignmentClass = index % 2 === 0 ? 'align-left' : 'align-right';
  
   return (
-    <>
+    <div className="Demo_Wrapper">
       <h1>{headerText}</h1>
       <li className={`Demo__item ${alignmentClass}`}>
 
@@ -24,10 +24,8 @@ const DemoIcon = ({index, icon, label, path, headerText, footerText}) =>
             <h4>{footerText}</h4>
           </div>
         </div>
-
-        
       </li>
-    </>
+    </div>
   );
 };
 

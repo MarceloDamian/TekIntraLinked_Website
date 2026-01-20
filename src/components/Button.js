@@ -35,7 +35,7 @@ buttonStyle = STYLES[0], buttonSize = SIZES[0], linkTo = '/ContactUs'}) =>
       {/* Not sure if this is the correct way to do this, but it works. */}
       <button className={`btn ${style} ${size}`} onClick={onClick} type={type}>
         {children}
-        {console.log(children)}
+        {/* {console.log(children)} */}
       </button>
     </Link>
   );

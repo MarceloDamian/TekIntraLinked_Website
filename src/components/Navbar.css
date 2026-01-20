@@ -91,7 +91,13 @@
   display: none;
 }
 
+button, .Tekintralinked-Logo-Only {
+  cursor: pointer;  
+}
+
 .Tekintralinked-Logo-Only {
+    cursor: pointer;  
+
   width: 5rem;
   height: 5rem;
   position: absolute;
@@ -110,12 +116,10 @@
   {
     padding-right:0%;
   }
-  
-  
+    
   .Tekintralinked-Logo-Only 
   {
-    /* display: none; */
-    z-index: -1;
+    z-index: 2;
   }
 
   
@@ -145,16 +149,17 @@
     width: 100vw;
     transition: opacity 0.5s ease;
     z-index: 2;
-
-
-
-
-
+    
     opacity: 1;
     visibility: visible;
 
     /* overflow-x: hidden; */
 
+  }
+
+  button, .nav-links
+  {
+    cursor: pointer;
   }
 
   .nav-links {
@@ -175,13 +180,15 @@
     margin-right: 0cm;
 
 
-    cursor: pointer;
   }
 
   .nav-links:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
+  }
+  button, .menu-icon
+  {
     cursor: pointer;
   }
 
@@ -192,7 +199,6 @@
     right: -0.2cm;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
-    cursor: pointer;
   }
 
   .fa-times {

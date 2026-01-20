@@ -19,13 +19,12 @@ function Navbar() {
 
   const location = useLocation(); // location is the current page you are on.
   const isContactPage = location.pathname === "/ContactUs";
-  console.log("Current path:", location.pathname);
+  // console.log("Current path:", location.pathname);
 
   const showButton = () => {
     if (window.innerWidth <= 535) {
       // the button is the top sign up button
       setButton(false);
-      console.log("true");
     } else {
       setButton(true);
     }
@@ -45,16 +44,14 @@ function Navbar() {
     // <nav className="navbar">
 
     <nav className={`navbar ${isContactPage ? "navbar-contact" : ""} `}>
-      
       <div>
-        
-        <Link to="/" onClick={closeMobileMenu}> 
-          <img
-            src={`images/TekIntraLinked-Logo-Only.png`}
-            alt="Logo"
-            className="Tekintralinked-Logo-Only"
-          />
-        </Link>
+          <Link to="/"> 
+            <img
+              src={`images/TekIntraLinked-Logo-Only.png`}
+              alt="Logo"
+              className="Tekintralinked-Logo-Only"
+            />
+          </Link>
 
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "" : "fas fa-bars"} />

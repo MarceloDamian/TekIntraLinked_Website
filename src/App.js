@@ -17,9 +17,9 @@ import ContactUs from './pages/ContactUs';
 import Portfolio_ from './pages/Portfolio_';
 
 
-// import FirstDemo from './pages/Portfolio/FirstDemo';
-// import SecondDemo from './pages/Portfolio/SecondDemo';
-// import ThirdDemo from './pages/Portfolio/ThirdDemo';
+import FirstDemo from './pages/Portfolio/FirstDemo';
+import SecondDemo from './pages/Portfolio/SecondDemo';
+import ThirdDemo from './pages/Portfolio/ThirdDemo';
 // import FourthDemo from './pages/Portfolio/FourthDemo';
 // import FifthDemo from './pages/Portfolio/FifthDemo';
 // import SixthDemo from './pages/Portfolio/SixthDemo';
@@ -40,6 +40,9 @@ function App() {
             <Route path='' exact element={<Home/>} />
             <Route path='/ContactUs' element={<ContactUs/>} />
             <Route path='/Portfolio' element={<Portfolio_/>} />
+            <Route path='/Portfolio/FirstDemo' element={<FirstDemo/>} />
+            <Route path='/Portfolio/SecondDemo' element={<SecondDemo/>} />
+            <Route path='/Portfolio/ThirdDemo' element={<ThirdDemo/>} />
 
           </Routes>
         <BottomFooter/>

@@ -1,5 +1,4 @@
 import {React, useLayoutEffect} from 'react';
-// import BottomFooter from '../../components/BottomFooter';
 import '../../App.css';
 
 
@@ -9,12 +8,15 @@ export default function FirstDemo() {
     window.scrollTo(0, 0)
   });
   return (
-    <>
-      First Demo
-      {/* A big textbox that deploys the project or 
-      website and then a botton on the top left to view 
-      the code in black and green */}
-    </>
+    <div className='FirstDemo'>
+
+        <h1>Hello world!</h1>
+        {/* A big textbox that deploys the project or 
+        website and then a botton on the top left to view 
+        the code in black and green */}
+
+    </div>
   );
 }
 
+// Complete Website
