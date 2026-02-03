@@ -1,0 +1,198 @@
+/* # File: src/components/Techstack.css */
+
+.tech {
+  padding-top: 100px;
+  background: #ffffff15;
+}
+
+.tech h1 {
+  font-size: 75px;
+  color: antiquewhite;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tech__item {
+  display: flex;
+  flex-flow: row;
+  width: 40vw;
+  height: 12rem;
+  max-width: 225px; /* limit max width */
+
+  /* border: 3px solid rgb(81, 66, 152); */
+
+  box-shadow: 0 6px 20px rgba(56, 126, 255, 0.333);
+  background-color: #97a3bf86;
+  margin: 0rem 0rem 0rem 1.5rem;
+}
+.python-icon {
+  height: 94%;
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.tech__item__link {
+  /* box-shadow: 0 6px 20px rgba(56, 126, 255, 0.333); */
+  /* background-color: #97a3bf86; */
+
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  height: 100%; /* ensure it fills the parent height */
+  width: 100%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  /* ensure it fills the parent width */
+
+  transition: transform 0.3s ease;
+
+  /* margin-left: 10%; */
+
+  /* border: 3px solid rgb(100, 187, 213); */
+}
+
+.React-icon {
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+}
+.Dart-icon {
+  height: 95%;
+  width: 95%;
+  margin-left: -0.1rem;
+
+}
+
+.tech__item__link:hover {
+  transform: scale(1.05);
+  /* Added a subtle hover effect */
+}
+
+.tech__item__pic-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.tech__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+
+  /* Switched to rem unit and positioned with left/right for robustness */
+  bottom: -3.2rem;
+  left: -16%;
+  right: 0%;
+  width: 132%;
+
+  padding: 6px 8px;
+  font-size: 1.1rem;
+
+  /* Used rem for scalable font size */
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #162a6ba2;
+
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 4px;
+
+  /* border: 3px solid rgb(11, 245, 241); */
+
+  /* Added a slight border-radius */
+}
+
+/* Adjusting the Swiper container to create space */
+.mySwiper {
+  width: 100%;
+  height: 350px;
+  /* border: 3px solid limegreen; */
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  --swiper-navigation-color: #bdc3d2de;
+  /* Use a color from your existing palette */
+}
+
+.mySwiper .swiper-button-prev {
+  
+  padding-right: 1rem;
+  transform: translateY(-4rem);
+  /* transform: translateX(-0.5rem); */
+
+
+  /* Changed from -50px */
+}
+
+.mySwiper .swiper-button-next {
+
+  padding-left: 1rem;
+  transform: translateY(-4rem);
+  /* transform: translateX(-0.5rem); */
+
+  /* transform: translateX(20%); */
+
+
+
+  /* Changed from -50px */
+}
+/* Stack vertically on smaller screens */
+@media (max-width: 535px) 
+{
+  .tech
+  {
+    display: none;
+  }
+  /* .React-icon { */
+    /* margin-top: -0.5rem; */
+    /* margin-left: 10rem; */
+    /* padding-top: 20rem; */
+  /* } */
+
+    /* .python-icon
+  {
+    margin-left: 1rem;
+  } */
+
+  /* .mySwiper
+  {
+    display: none;
+    background-color: black;
+  } */
+
+  .tech__item__link
+  {
+    padding-left: 7% !important;
+  }
+
+  .tech__item__pic-wrap::after
+  {
+    left: -10%;
+    width: 125%;
+  }
+
+
+}
+
+/* .tech__item__label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff; 
+  background-color: #405595; 
+  padding: 6px 8px;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+} */

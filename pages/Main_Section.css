@@ -1,0 +1,92 @@
+
+body, html {
+  overflow-x: hidden;
+}
+
+.Video-Container video {
+  
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.Video-Container {
+  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+  
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.Video-Container > h1 {
+  color: #fff;
+  font-size: 100px;
+  margin-top: -100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Video-Container > p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 32px;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.Tek-Display-Wraper 
+{
+  position: absolute;
+}
+
+.Tekintralinked-Logo-Enlarged { 
+  margin-bottom: 5%;
+  overflow-x: hidden;
+  height: 100%; 
+  width:100%;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+  .Video-Container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+    .Video-Container 
+  {
+    height: 87vh ;
+    /* margin-bottom:-10rem ; */
+  }
+  .Video-Container video
+  {
+    height:100vh ;
+    /* margin-bottom:-10rem ; */
+  }
+
+  /* .Video-Container > h1 {
+    font-size: 42px;
+    margin-top: -100px;
+  } */
+
+  /* .Video-Container > p {
+    font-size: 30px;
+  } */
+
+  
+}
