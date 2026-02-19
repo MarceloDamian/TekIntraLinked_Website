@@ -1,12 +1,7 @@
-import React, { useEffect } from 'react';
-// import './App.css';
+import React, { useEffect, useState } from 'react';
 import Tech from '../src/components/Tech';
-// import Main_Section from '../components/Main_Section';
-
 import Main_Section from '../src/components/Main_Section';
-
 import TopFooter from '../src/components/TopFooter';
-
 
 // import BottomFooter from '../components/BottomFooter';
 
@@ -19,10 +14,10 @@ const Home = () => {
 
   return (
     <>
-      <Main_Section/>
-      <Tech />
-      <TopFooter />
-      {/* Bottomfooter is in app js */}
+        <Main_Section/>
+        <Tech />
+        <TopFooter />
+        {/* Bottomfooter is in app js */}
     </>
   );
 }

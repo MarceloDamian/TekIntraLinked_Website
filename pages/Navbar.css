@@ -113,11 +113,12 @@ button, .Tekintralinked-Logo-Only {
 
 @media screen and (max-width: 535px) {
 
-  .navbar
-  {
-    padding-right:0%;
-  }
+  /* .navbar
+  { */
+    /* padding-right:0%; */
+  /* } */
     
+
   .Tekintralinked-Logo-Only 
   {
     z-index: 2;
@@ -146,13 +147,13 @@ button, .Tekintralinked-Logo-Only {
       rgb(97, 194, 230, 0.7)
     );
 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100vw; 
     height: 100vh;
-    /* max-height: 110vh;
-    overflow-y: hidden;
-    overflow: hidden; */
-    width: 100vw;
     transition: opacity 0.5s ease;
-    z-index: 2;
+    z-index: 1;
     
     opacity: 1;
     visibility: visible;

@@ -1,19 +1,21 @@
 
 .SecondDemo_
 {
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    padding-top:2rem;
-    padding-right:4rem;
-    padding-left:4rem;
-    padding-bottom:2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas:
+      "TitleContainer TitleContainer TitleContainer"
+      "FirstClip SecondClip DemoText"
+      "ShortVideoDemo MVPPhoto DemoText";
+    /* gap: 5px; */
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+
+
+
     background-color: #222a38d9;
-    width:100vw;
-    height:100vh;
-
-    /* position: fixed; */
-
     background-image: 
     linear-gradient(to bottom, #28364ee8, #334155 60%, #475569),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" filter="url(#n)" opacity="0.06"/></svg>');
@@ -23,4 +25,111 @@
 .SecondDemo_ h1
 {
   color:white;  
+}
+
+
+
+
+.FirstClip
+{
+  margin-bottom: 0.05cm;
+  margin-top: 0.5cm;
+  height:10cm;
+
+}
+.FirstClip video 
+{
+  grid-area: FirstClip; 
+  /* width: auto; */
+  height: 8cm;
+}
+
+
+.SecondClip
+{
+  margin-bottom: 0.05cm;
+  margin-top: 0.05cm;
+  height:10cm;
+
+}
+.SecondClip video {
+  grid-area: SecondClip;
+  /* width: 5vw; */
+  height: 8cm;
+}
+
+
+.ShortVideoDemo
+{
+  margin-bottom: 0.05cm;
+  margin-top: 0.05cm;
+  height:10cm;
+}
+.ShortVideoDemo video {
+  grid-area: ShortVideoDemo;
+  height: 8cm;
+}
+
+.MVPPhotoContainer
+{
+  height: 12cm;
+  margin-top: 0.05cm;
+  margin-bottom: 0.05cm;
+}
+
+.MVPPhoto
+{
+  /* width: 5cm; */
+  height: 10cm;
+  margin-top: 0.05cm;
+  margin-bottom: 0.05cm;
+  /* height:50vh; */
+}
+
+
+
+
+.DemoText {
+  grid-area: DemoText;
+  height:50vh;
+}
+
+.TitleContainer 
+{
+  grid-area: TitleContainer;
+}
+
+.TitleContainer h1
+{
+  /* grid-area: Title-Container; */
+
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  font-size: 50px;
+
+}
+
+.TitleContainer h2
+{
+  /* grid-area: Title-Container; */
+
+  display: block;
+  justify-content: center; 
+  text-align: center;
+  font-size: 30px;
+  height:1.5cm;
+
+  /* background-color: aqua; */
+
+}
+
+
+
+
+@media (max-width: 650px) {
+  /* .FirstDemoImg */
+  /* {
+    max-height:300px;
+  } */
 }

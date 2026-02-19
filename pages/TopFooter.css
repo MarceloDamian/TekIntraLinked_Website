@@ -112,10 +112,10 @@ button, .lets-chat-button
 
 @media screen and (max-width: 535px) 
 {
-    .footer-subscription
+    /* .footer-subscription
     {
         display:none;
-    }
+    } */
 }
 
 

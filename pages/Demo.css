@@ -212,6 +212,7 @@
     max-height:300px;
 
   }
+  
   .Demo__item__content {
     display:block;
     flex-direction: column;

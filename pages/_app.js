@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from '../src/components/Navbar';
 import BottomFooter from "../src/components/BottomFooter";
 import './App.css';
@@ -13,6 +13,11 @@ import './SignUp.css';
 import './Techstack.css';
 import './TopFooter.css';
 
+import './Portfolio/FirstDemo.css';
+import './Portfolio/SecondDemo.css';
+import './Portfolio/ThirdDemo.css';
+
+
 
 
 import "swiper/css";
@@ -22,11 +27,16 @@ import "swiper/css/navigation";
 
 
 function MyApp({ Component, pageProps }) {
+    
+  const [menuActive, setMenuActive] = useState(false);
+  
   return (
     <>
-      <Navbar />
-      <Component {...pageProps} />
-      <BottomFooter />
+      <div className={menuActive ? 'menu-active' : ''}>
+        <Navbar click={menuActive} setClick={setMenuActive} />
+        <Component {...pageProps} />
+        <BottomFooter />
+      </div>
     </>
   );
 }

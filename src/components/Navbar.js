@@ -1,9 +1,6 @@
 
 
 import React, { useState, useEffect } from "react";
-
-import Button from "./Button_";
-// import { Link, useLocation } from "react-router-dom";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -13,8 +10,9 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 // import "./Navbar.css";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
+function Navbar({ click, setClick}) {
+
+  // const [click, setClick] = useState(false);
 
   // click is a booleanvar and setclick is a constructor?
   // click is a var in that set constructor which is setclick.
@@ -24,35 +22,34 @@ function Navbar() {
   const handleClick = () => setClick(!click); // This is the Toggle Switch
   const closeMobileMenu = () => setClick(false); // This overrides the Toggle to OFF.
 
-  const [button, setButton] = useState(true); // Button may be used in the future.
-
+  // const [button, setButton] = useState(true); // Button may be used in the future.
   const router = useRouter(); // location is the current page you are on.
 
   const isContactPage = router.pathname === "/ContactUs";
   // console.log("Current path:", location.pathname);
 
-  const showButton = () => {
-    if (window.innerWidth <= 535) {
-      // the button is the top sign up button
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
+  // const showButton = () => {
+  //   if (window.innerWidth <= 535) {
+  //     // the button is the top sign up button
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // };
 
   // useEffect( () => { (window.innerWidth <= 535)? {} :  window.addEventListener('resize', ); } ); // delete?
   // useEffect(() => {showButton();}, []); // OG line returning an empty array. NULL
 
-  useEffect(() => {
-    showButton();
-  }); // OG line returning an empty array. NULL
+  // useEffect(() => {
+  //   showButton();
+  // }); // OG line returning an empty array. NULL
 
   // window.addEventListener("resize", showButton); // changed resize to resizing
 
-  useEffect(() => {
-    window.addEventListener("resize", showButton);
-    return () => window.removeEventListener("resize", showButton);
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", showButton);
+  //   return () => window.removeEventListener("resize", showButton);
+  // }, []);
 
   // ! FIX THIS BUTTON FOR MOBILE APPLICATION.
 
@@ -63,7 +60,7 @@ function Navbar() {
       <div>
         <Link href="/" onClick={closeMobileMenu}>
             <img
-              src={`images/TekIntraLinked-Logo-Only.png`}
+              src={"/images/TekIntraLinked-Logo-Only.png"}
               alt="Logo"
               className="Tekintralinked-Logo-Only"
             />

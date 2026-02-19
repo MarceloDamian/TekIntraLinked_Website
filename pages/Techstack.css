@@ -150,10 +150,10 @@
 /* Stack vertically on smaller screens */
 @media (max-width: 535px) 
 {
-  .tech
+  /* .tech
   {
     display: none;
-  }
+  } */
   /* .React-icon { */
     /* margin-top: -0.5rem; */
     /* margin-left: 10rem; */

@@ -24,6 +24,8 @@ function SignUp() {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID; 
     // use .env variables for this
+    console.log(serviceId, templateId, userID);
+    console.log(name, email, message);
 
     if (!name || !email || !message)
     {
@@ -46,12 +48,16 @@ function SignUp() {
     };
 
     try {
+
       const res = await axios.post(
         "https://api.emailjs.com/api/v1.0/email/send",
         data,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
       );
-
-      console.log(res.data);
       // setName("");
       // setEmail("");
       // setMessage("");
@@ -63,8 +69,7 @@ function SignUp() {
       
     } 
     catch (error) {
-      console.error(error);
-      
+      console.error(error, "Error sending email", error.response.data);
     }
 
 

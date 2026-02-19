@@ -7,11 +7,19 @@ import { IoLogoReact } from "react-icons/io5";
 // ! Revise Resume
 // ! Revise AI Video and ParkerUp Video.
 
-// ! Edit HTML Template to include a resume and maybe portfolio links. 
-// ! Write individual text for each project page
-// ! have some photos for each project page. 
 
+// ! ADD videos and photos to individual pages. 
+// ! Edit HTML Template to include a resume and maybe portfolio links.
+// ! Post website. 
+// ! Redo videos to expel any inconsistencies such as recording or crop showcase. 
+
+
+// ! Add small icons on portfolio like the techstack under the photo.  
+// ! A Demo Button that links it to the github repository for easier access
 // ! Refactor and clean up code. 
+
+// ! Comment on the code. 
+// ! Figure out what t. microservice would be better to create and instance, as well as which one is the most affordable. 
 
 const DemoData = [
   {
@@ -26,7 +34,16 @@ const DemoData = [
     label: "This is the Label",
     path: "../Portfolio/FirstDemo",
     footerText:
-      "TekIntraLinked.com is a modern, responsive portfolio site I built using React, JavaScript, Tailwind CSS, and Node.js, with seamless email integrations for user interactions. 🌟📧Deployed on AWS with HTTPS security, custom routing, and monitoring, it showcases my full-stack expertise in delivering reliable, scalable web applications. ☁️🔒🚀",
+    ( <>
+        <h4>
+          Tekintralinked is a self-founded engineering venture created to 
+          demonstrate real-world software ownership, infrastructure control, 
+          and production deployment. 
+          It is a production-deployed system designed to prove
+          execution, resilience, and technical depth.        
+        </h4>
+      </>
+    ),
   },
   {
     headerText: "ParkerUp",
@@ -41,7 +58,17 @@ const DemoData = [
     ),
     label: "This is the Label for ParkerUp",
     path: "../Portfolio/SecondDemo",
-    footerText: "Architected and shipped a cross-platform mobile app using Flutter andDart, powering a peer-to-peer, community-driven navigation system.Orchestrated 8+ API integrations (Firebase, Google Maps, Google Cloud) to turn real-world movement into real-time intelligence at scale.",
+    footerText:
+    (
+      <>
+        <h4>
+          Architected and shipped a cross-platform mobile app using Flutter and Dart, 
+          powering a peer-to-peer, community-driven navigation system. Orchestrated 
+          8+ API integrations (Firebase, Google Maps, Google Cloud, etc.) to turn real-world 
+          movement into real-time intelligence at scale.
+        </h4>
+      </>
+    ) 
   },
   {
     headerText: "AI/ML IMAGE CLASSIFIER",
@@ -53,7 +80,15 @@ const DemoData = [
     label: "This is the Label for IMAGE CLASSIFIER",
     path: "../Portfolio/ThirdDemo",
     footerText:
-      "Built an end-to-end, object-oriented neural network in pure Python and NumPy, achieving 80%+ MNIST accuracy. Implemented numerically stable activations, He initialization, and momentum-based gradient descent. Optimized hyperparameters, enabled flexible multilayer architectures, and applied robust preprocessing and data imputation to improve training efficiency.",
+    (
+      <h4>
+        Built an end-to-end, object-oriented neural network in pure Python and NumPy, 
+        achieving over 80% accuracy on the MNIST dataset for handwritten digit classification. 
+        Implemented numerically stable activations, He initialization, and momentum-based gradient 
+        descent. Optimized hyperparameters, enabled flexible multilayer architectures, and applied 
+        robust preprocessing and data imputation to improve training efficiency.
+      </h4>
+    )
   },
 
   // Below is other items that are not part of the main items

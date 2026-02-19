@@ -21,7 +21,7 @@ const DemoIcon = ({index, icon, label, path, headerText, footerText}) =>
             {icon}
           </Link>
           <div className="Demo__item__text">
-            <h4>{footerText}</h4>
+            {footerText}
           </div>
         </div>
       </li>

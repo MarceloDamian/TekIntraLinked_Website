@@ -11,10 +11,20 @@
 .Home,
 .Portfolio,
 .ContactUs,
-.FirstDemo{
+.FirstDemo
+{
   height: 100vh;
   justify-content: center;
   font-size: 3rem;
 }
 
 
+@media screen and (max-width: 535px) 
+{
+  .menu-active .tech,
+  .menu-active .footer-container,
+  .menu-active .footer-subscription {
+    display: none;
+  }
+
+}

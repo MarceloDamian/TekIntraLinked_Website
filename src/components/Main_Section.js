@@ -9,7 +9,7 @@ const Main_Section = ()=>{
         <source src="../../videos/HyperLapse.mp4" type="video/mp4"/>
       </video>
 
-      <div className='Tek-Display-Wraper'>
+      <div className='Tek-Display-Wrapper'>
         <img src={`images/TekIntraLinked-Logo-Light.png`} className="Tekintralinked-Logo-Enlarged" />,
       </div>
       {/* <a target="_blank" href="http://www.videezy.com">Free Stock Footage by Videezy!</a> */}
