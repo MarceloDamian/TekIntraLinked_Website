@@ -1,10 +1,10 @@
+// Import React and supporting components
 import React from "react";
 import Button from "./Button_";
 import Link from "next/link";
-// import SubscriptionSection from "./SubscriptionSection";
-// import "./TopFooter.css";
 import EmailSender from "./EmailAxios";
 
+// TopFooter renders a call-to-action section with an email sender
 const TopFooter = () => {
   return (
     <>
@@ -18,7 +18,8 @@ const TopFooter = () => {
   );
 };
 
-// ! Subscription will be needed for a gym version of the website to send an ebook
-// ! Subscription will most likely not be needed for tech website.
+// Notes:
+// - Subscription section may be used in a different version (e.g., gym site)
+// - Not required for this tech-focused site
 
 export default TopFooter;

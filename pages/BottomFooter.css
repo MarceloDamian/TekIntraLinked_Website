@@ -1,9 +1,9 @@
 :root {
   /* For debugging purposes */
   /* --primary-color: #225478d4;  */
-  
-  /* This is the actual primary color  */  
-  --primary-color: #041d2fd4; 
+
+  /* This is the actual primary color  */
+  --primary-color: #041d2fd4;
   --text-color: #fff;
   --font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
@@ -11,6 +11,8 @@
 
   --footer-link-margin: 0px 10px 0px 10px;
   --footer-link-text-font-size: 24px;
+
+
 }
 
 .footer-container {
@@ -25,20 +27,27 @@
   flex-direction: row; 
   justify-content: space-between;
   align-items: flex-start; */
+
+
 }
 
 .footer-links {
   width: 100%;
   display: flex;
   justify-content: center;
+
 }
 
 .footer-link-items h3 {
   margin: var(--footer-link-margin);
   /* font-size: var(--footer-link-text-font-size); */
-  font-size: clamp(18px, 3vw, 23px); /* Min 12px, preferred 4vw, max 20px */
+  font-size: clamp(18px, 3vw, 23px);
+  /* Min 12px, preferred 4vw, max 20px */
   color: var(--text-color);
+
+
 }
+
 .footer-link-items a {
   color: var(--footer-text-color);
   text-decoration: none;
@@ -49,7 +58,7 @@
   transition: 0.3s ease-out;
 }
 
- /* @media screen and (max-width: 535px) 
+/* @media screen and (max-width: 535px) 
 {
     .footer-container
     {

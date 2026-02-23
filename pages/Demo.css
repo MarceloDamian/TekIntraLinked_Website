@@ -3,7 +3,7 @@
   
   --color-white: #000000d6;
   
-  --color-background: #919db9;
+  /* --color-background: #919db9; */
   --color-text: #252e48;
   --color-overlay: #405595;
   --color-shadow: rgba(56, 126, 255, 0.82);
@@ -73,7 +73,12 @@
   border-radius: var(--border-radius);
   overflow: hidden;
   text-decoration: none;
-  background-color: var(--color-background);
+
+
+
+
+
+  /* background-color: var(--color-background); */
 }
 
 .Demo__item__pic-wrap 
@@ -92,11 +97,12 @@
   margin-left: 10px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
-  font-size: var(--font-size-medium);
-  font-weight: 700;
-  color: var(--color-white);
-  background-color: var(--color-overlay);
   box-sizing: border-box;
+
+  /* font-size: var(--font-size-medium); */
+  /* font-weight: 700; */
+  /* color: var(--color-white); */
+  /* background-color: var(--color-overlay); */
 }
 
 
@@ -147,7 +153,7 @@
 
 }
 
-.MVPPhoto
+.EncryptedPhoto
 {
   right:0;
   left:0cm;
@@ -212,7 +218,7 @@
     max-height:300px;
 
   }
-  
+
   .Demo__item__content {
     display:block;
     flex-direction: column;

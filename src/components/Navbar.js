@@ -1,63 +1,26 @@
-
-
+// Import React hooks, Next.js Link and Router, and icons
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-
-
-
-// import "./Navbar.css";
-
+// Navbar component receives click state and setter from parent
 function Navbar({ click, setClick}) {
+  // Toggle mobile menu open/close
+  const handleClick = () => setClick(!click); // Toggle switch
+  const closeMobileMenu = () => setClick(false); // Force menu closed
 
-  // const [click, setClick] = useState(false);
+  // Router for current path
+  const router = useRouter(); // Represents current route path
 
-  // click is a booleanvar and setclick is a constructor?
-  // click is a var in that set constructor which is setclick.
-  // Setclick is a set existing state from react.
-  // You then have to initialize click which is false as it is a booleanvar
-
-  const handleClick = () => setClick(!click); // This is the Toggle Switch
-  const closeMobileMenu = () => setClick(false); // This overrides the Toggle to OFF.
-
-  // const [button, setButton] = useState(true); // Button may be used in the future.
-  const router = useRouter(); // location is the current page you are on.
-
+  // Check if user is on ContactUs page to adjust navbar style
   const isContactPage = router.pathname === "/ContactUs";
-  // console.log("Current path:", location.pathname);
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 535) {
-  //     // the button is the top sign up button
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
-
-  // useEffect( () => { (window.innerWidth <= 535)? {} :  window.addEventListener('resize', ); } ); // delete?
-  // useEffect(() => {showButton();}, []); // OG line returning an empty array. NULL
-
-  // useEffect(() => {
-  //   showButton();
-  // }); // OG line returning an empty array. NULL
-
-  // window.addEventListener("resize", showButton); // changed resize to resizing
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", showButton);
-  //   return () => window.removeEventListener("resize", showButton);
-  // }, []);
-
-  // ! FIX THIS BUTTON FOR MOBILE APPLICATION.
-
+  // Render navbar with logo and menu links
   return (
-    // <nav className="navbar">
-
     <nav className={`navbar ${isContactPage ? "navbar-contact" : ""} `}>
       <div>
+        {/* Clicking the logo navigates home and closes mobile menu */}
         <Link href="/" onClick={closeMobileMenu}>
             <img
               src={"/images/TekIntraLinked-Logo-Only.png"}
@@ -66,32 +29,26 @@ function Navbar({ click, setClick}) {
             />
         </Link>
 
+        {/* Hamburger icon for mobile menu toggle */}
         <div className="menu-icon" onClick={handleClick}>
-          {click ? "": <FaBars size={45} color="#c2d0e1ff" />  } { /* If click is true then x. If click is false then menu bars   */}
+          {click ? "": <FaBars size={45} color="#c2d0e1ff" />}
         </div>
-        {/* If click is true then x. If click is false then menu bars   */}
 
+        {/* Mobile/desktop nav menu list */}
         <li className={click ? "nav-menu active" : "nav-menu" }>
-          {/* If false the navigation menu disappears. If true the menu appears. */}
-
-
+          {/* Close icon inside mobile menu */}
           <div className="menu-icon" onClick={closeMobileMenu}>
             {click ? <FaTimes />  : ""}
           </div>
 
-
-
-          {/* Fix menu so it works and looks seamless.  */}
-
-          {/* <li className="nav-item"> */}
+          {/* Main navigation links */}
           <Link href="/" className="nav-links" onClick={closeMobileMenu}>
             HOME
           </Link>
-          {/* </li> */}
-          {/* <li className="nav-item"> */}
           <Link href="/Portfolio" className="nav-links" onClick={closeMobileMenu}>
             PORTFOLIO
           </Link>
+          {/* Downloadable resume link */}
           <a
             href="/ErickCabreraResume_.pdf"
             download="ErickCabreraResume_.pdf"
@@ -102,6 +59,7 @@ function Navbar({ click, setClick}) {
           </a>
         </li>
 
+        {/* Placeholder for potential future sign-up button */}
         {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
       </div>
     </nav>

@@ -1,5 +1,4 @@
-// import React from "react";
-
+// Import icons used in tech stack (some may be used within techData)
 import { FaPython, FaHtml5, FaSwift, FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiCplusplus } from "react-icons/si";
@@ -7,41 +6,24 @@ import { VscTerminalBash } from "react-icons/vsc";
 import { SiDart } from "react-icons/si";
 import { IoLogoReact } from "react-icons/io5";
 
+// Import tech data and TechIcon component
 import techData from "./techData";
+import TechIcon from "./TechIcon"; // Styles for tech cards are defined in TechIcon-related CSS
 
-import TechIcon from "./TechIcon"; // techstack.css is in TechIcon
-
-// Move cards to Portfolio file. Home and Portfolio have to be different.
-// Each card should inevitably link to another page with a code or demo.
-// Each demo should work by itself.
-
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+// Import React and Swiper components/modules
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-
-// Import Swiper styles
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import "./Techstack.css";
-
+// Tech component renders a carousel of technology icons using Swiper
 const Tech = () => {
-  // TODO: Add a carousel for the icons
-  // TODO: Carousel use Swiperjs.com
-  // TODO: Fix the footer
-  // TODO: Enhance the portfolio website and add text
-  // TODO: Adjust the layout and possibly change the video
-  // TODO: Complete V1 of the website
+  // TODO: Enhance the portfolio with more descriptive text and improved layout
 
   return (
     <>
       <div className="tech">
         <h1> TECHSTACK:</h1>
-        {/* Section heading */}
-        {/* Seperate these Portfolio based on skill // Web dev // AI machine learning // Mobile app (Full Stack) */}
+        {/* Carousel of tech icons configured with responsive breakpoints and autoplay */}
         <Swiper
           slidesOffsetBefore={15}
           slidesPerView={3}
@@ -57,7 +39,6 @@ const Tech = () => {
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
-          // virtual={true}
           breakpoints={{
             0:
             {

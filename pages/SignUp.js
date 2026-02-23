@@ -1,32 +1,40 @@
+// Import React and useState hook for state management
 import React from "react";
 import { useState } from "react";
-// import "./SignUp.css";
+// Import Submit button component
 import { Submit } from "../src/components/Submit";
+// Import axios for HTTP requests
 import axios from "axios";
+// Import custom Button component
 import Button  from "../src/components/Button_";
 
-// Use this website https://www.youtube.com/watch?v=btZII7TXlhk
-// add automatic setup using wifi { https://react.email/docs/getting-started/automatic-setup }
-// take creative inspiration from www.silverlake.com
+// Import BottomFooter component
+import BottomFooter from "../src/components/BottomFooter";
 
+// SignUp component for user contact form
 function SignUp() {
+  // State variables for form fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  // State for form submission status
   const [status, setStatus] = useState(null);
 
-
+  // Handle form submit event
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Retrieve email service config from environment variables
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID; 
-    // use .env variables for this
+
+    // Log service config and form data for debugging
     console.log(serviceId, templateId, userID);
     console.log(name, email, message);
 
+    // Validate form fields
     if (!name || !email || !message)
     {
       setStatus('ERROR');
@@ -34,6 +42,7 @@ function SignUp() {
       return;
     }
 
+    // Prepare data payload for email service
     const data = 
     {
       service_id: serviceId,
@@ -48,7 +57,7 @@ function SignUp() {
     };
 
     try {
-
+      // Send email via emailjs API
       const res = await axios.post(
         "https://api.emailjs.com/api/v1.0/email/send",
         data,
@@ -58,40 +67,36 @@ function SignUp() {
           }
         }
       );
-      // setName("");
-      // setEmail("");
-      // setMessage("");
-      
+      // If successful, update status
       if (res.status === 200) 
       {
         setStatus('OK');
       } 
-      
     } 
     catch (error) {
+      // Log any errors
       console.error(error, "Error sending email", error.response.data);
     }
-
-
   };
+
   return (
     <>
-
-
+      {/* Form container with background video */}
       <div className="FormtoSend">
         <video autoPlay loop muted>
           <source src="../../videos/BackgroundVideo1_.mp4" type="video/mp4" />
         </video>
 
+        {/* Email form with conditional success message */}
         <form onSubmit={handleSubmit} className="emailForm">
-
           {status === 'OK' ? (
             <div className="successMessage">
-              {/* Success message or styled element */}
+              {/* Success message displayed after email sent */}
               <h2>Thank you! Your message has been sent.</h2>
             </div>
             ) : (
               <>
+                {/* Input for name */}
                 <div className="InnerBox">
                   <h2>Email Me:</h2>
                   <h3>Name:</h3>
@@ -104,6 +109,7 @@ function SignUp() {
                   />
                 </div>
 
+                {/* Input for email */}
                 <div className="InnerBox">
                   <h3>Email:</h3>
                   <input
@@ -115,6 +121,7 @@ function SignUp() {
                   />
                 </div>
 
+                {/* Textarea for message */}
                 <div className="MessageBox">
                   <h3>Message:</h3>
                   <textarea
@@ -128,6 +135,7 @@ function SignUp() {
                   />
                 </div>
 
+                {/* Submit button */}
                 <div className="Centering-Button">
                   <Submit type="submit">Send Email</Submit>
                 </div>
@@ -139,4 +147,5 @@ function SignUp() {
   );
 }
 
+// Export SignUp component as default
 export default SignUp;

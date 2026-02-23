@@ -1,32 +1,25 @@
-
-
+// Import React, Next.js Link, and PropTypes for validation
 import React from 'react';
 import Link from "next/link";
 import PropTypes from 'prop-types';
 
-// import './Button.css';
-
-
-// const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
-
+// Allowed styles and sizes for the Button component
 const STYLES = ['btn--outline'];
 const SIZES = ['btn--medium', 'btn--Large', 'btn--Extra-Large'];
 
-
-
+// Helper to validate style prop and fall back to default
 const getButtonStyle = (buttonStyle) => 
 {
   return STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 };
 
+// Helper to validate size prop and fall back to default
 const getButtonSize = (buttonSize) => 
 {
   return SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 };
 
-
-// export const Button = ({children, type = 'button', onClick = () => {}, 
-
+// Button component that wraps a button with a Next.js Link
 const Button = ({children, type = 'button', onClick = () => {}, 
 buttonStyle = STYLES[0], buttonSize = SIZES[0], linkTo}) => 
 {
@@ -34,17 +27,16 @@ buttonStyle = STYLES[0], buttonSize = SIZES[0], linkTo}) =>
   const size = getButtonSize(buttonSize);
 
   return (
-    // <Link to={linkTo} className="btn-mobile">
     <Link href={linkTo|| '/'}>
-      {/* Not sure if this is the correct way to do this, but it works. */}
       <button className={`btn ${style} ${size}`} onClick={onClick} type={type}>
+        {/* Render children as button content */}
         {children}
-        {/* {console.log(children)} */}
       </button>
     </Link>
   );
 };
 
+// PropTypes for Button component
 Button.propTypes = 
 {
   children: PropTypes.node.isRequired,
@@ -56,40 +48,3 @@ Button.propTypes =
 };
 
 export default Button;
-
-
-
-
-
-
-// import React from 'react';
-// import './Button.css';
-
-// import { Link } from 'react-router-dom';
-
-// const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
-// const SIZES = ['btn--medium', 'btn--large'];
-
-// export const Button = ({
-//   children,
-//   type,
-//   onClick,
-//   buttonStyle,
-//   buttonSize
-// }) => 
-// {
-//   const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle: STYLES[0];
-//   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
-//   return (
-//     <Link to='/ContactUs' className='btn-mobile'>
-//       <button
-//         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-//         onClick={onClick}
-//         type={type}
-//       >
-//         {children}
-//       </button>
-//     </Link>
-//   );
-// };

@@ -1,4 +1,4 @@
-  
+// Client component: uses hooks and client-side rendering
 'use client';
 import axios from 'axios';
 import React, { useState } from "react";
@@ -8,11 +8,7 @@ import PropTypes from "prop-types";
 import EmailTemplate from './EmailTemplate.jsx';
 import ReactDOMServer from 'react-dom/server';
 
-// import "./TopFooter.css";
-
-// Resend for incoming emails for next update of this website. 
-
-  // This is the backend code using axios to send an email.
+// EmailSender sends an email using the Next.js API route and a rendered HTML email template
 const EmailSender = (
   { buttonText,
     buttonStyle,
@@ -21,29 +17,23 @@ const EmailSender = (
   }
 ) => {
 
+  // Local state for recipient email and submission status
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(null);
   
-
+  // Send email handler: renders EmailTemplate to HTML and posts to /api/send-email
   const sendEmail = async (e) => {
-    
     e.preventDefault();
 
-
     try {
-      
       const htmlString = ReactDOMServer.renderToStaticMarkup(<EmailTemplate />);
 
       const response = await axios.post("/api/send-email", {
         from: "erick.cabrera@tekintralinked.com",
         // to: [`officialerickpage@gmail.com`],
         to: [email],
-        subject: "Hello World",
-        // html:"",
-        // html: "<strong>It works!</strong>",
+        subject: "Tekintralinked",
         html: htmlString,
-        // EmailTemplate(),
-        // Resume(),
       });
       
       if (response.status === 200) 
@@ -56,68 +46,70 @@ const EmailSender = (
       console.error('Error sending email:', error);
     }
   };
-    return (
-      <>
-        <section className="footer-subscription">
-          {status === "OK" ? (
-            <>
-              <div className="lets-chat-button">
-                <Button
+
+  // Render CTA button and input form; show success message when email sent
+  return (
+    <>
+      <section className="footer-subscription">
+        {status === "OK" ? (
+          <>
+            <div className="lets-chat-button">
+              <Button
+              buttonStyle={buttonStyle}
+              buttonSize={buttonSize}
+              linkTo="/ContactUs"
+              >
+              {buttonText}
+              </Button>
+            </div>
+
+            {/* Footer label hidden once email is sent */}
+            <p className="thin-gradient-line"> {footer=""}</p>
+            <div className="EmailSentSuccess">
+              {/* Success message shown after email send */}
+              <h2>Thank you! A copy has been sent.</h2>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="lets-chat-button">
+              <Button
                 buttonStyle={buttonStyle}
                 buttonSize={buttonSize}
                 linkTo="/ContactUs"
-                >
+              >
                 {buttonText}
-                </Button>
-              </div>
+              </Button>
+            </div>
 
-              <p className="thin-gradient-line"> {footer=""}</p>
-              <div className="EmailSentSuccess">
-                {/* Success message or styled element */}
-                <h2>Thank you! A copy has been sent.</h2>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="lets-chat-button">
-                <Button
-                  buttonStyle={buttonStyle}
-                  buttonSize={buttonSize}
-                  linkTo="/ContactUs"
-                >
-                  {buttonText}
-                </Button>
-              </div>
+            <p className="thin-gradient-line"> {footer}</p>
 
-              <p className="thin-gradient-line"> {footer}</p>
+            <div className="footer-subscription-input">
+              <input
+                className="input--resume"
+                type="Email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
-              <div className="footer-subscription-input">
-                <input
-                  className="input--resume"
-                  type="Email"
-                  placeholder="Your Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-
-                <Button
-                  buttonStyle={buttonStyle}
-                  buttonSize={"btn--Large"}
-                  onClick={sendEmail}
-                  linkTo = '/'
-                >
-                  {(buttonText = "Send It Now")}
-                </Button>
-              </div>
-            </>
-          )}
-        </section>
-      </>
-    );
-
-    
+              <Button
+                buttonStyle={buttonStyle}
+                buttonSize={"btn--Large"}
+                onClick={sendEmail}
+                linkTo = '/'
+              >
+                {(buttonText = "Send It Now")}
+              </Button>
+            </div>
+          </>
+        )}
+      </section>
+    </>
+  );
 };
 
+// PropTypes for EmailSender component
 EmailSender.propTypes = {
   buttonText: PropTypes.string.isRequired,
   buttonStyle: PropTypes.string,

@@ -1,11 +1,11 @@
+// Import icons used in tech data (some entries use custom images)
 import { FaHtml5, FaSwift, FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiCplusplus } from "react-icons/si";
 import { VscTerminalBash } from "react-icons/vsc";
 import { IoLogoReact } from "react-icons/io5";
 
-
-
+// techData is an array of technologies displayed in the Tech carousel
 const techData = [
   {
     icon: <img src={`images/PythonLogo.png`} className="python-icon" />,
@@ -53,6 +53,7 @@ const techData = [
     path: "/Portfolio",
   },
 
+  // Excluded technologies for now; they don't add much value to this portfolio
   // {
   //   icon: <img src={`images/MIPSLOGO.png`} height="150cm" width="200cm" />,
   //   label: "MIPS",
@@ -63,8 +64,6 @@ const techData = [
   //   label: "PERL",
   //   path: "/Portfolio",
   // },
-  // I have decided to not include these in my portfolio. They dont
-  // add much value to the portfolio and I dont want to include them.
 ];
 
 export default techData;

@@ -1,30 +1,30 @@
 
+// Import React and useEffect hook for lifecycle management
 import React, {useEffect} from 'react';
+// Import DemoIcon component to display individual demo cards
 import DemoIcon from '../src/components/DemoIcon';
+// Import demo data array to populate portfolio sections
 import DemoData from '../src/components/DemoData';
-// import "./../components/Demo.css";
+
+// Import BottomFooter component for page footer
+import BottomFooter from '../src/components/BottomFooter';
 
 
-// TODO: Possibly use MouseWheel Control from swiperjs.com 
-// TODO: to better perform this and fix this. 
+// TODO: Possibly use MouseWheel Control from swiperjs.com to improve demo navigation
+// TODO: Consider changing background color to a dark theme
+// Note: Demo.css styles are applied in DemoIcon component
 
-// TODO: Change background color to dark? maybe not black
-
-// Demo.css is in DemoIcon
-
-// Move Demo to Portfolio file. Home and Portfolio have to be different. 
-// Each card should inevitably link to another page with a code or demo. 
-// Each demo should work by itself. 
-
+// PortfolioSections component renders a list of demo cards from provided data
 const PortfolioSections = ({ FullSet }) => (
   <>
     {
+      // Map over demo data to render each DemoIcon component
       FullSet.map((demo, index) => (
         <DemoIcon
           key={index}
           index={index}
           icon={demo.icon}
-          label={demo.label}
+          // label={demo.label} // label currently unused
           path={demo.path}
           headerText={demo.headerText}
           footerText={demo.footerText}
@@ -34,20 +34,33 @@ const PortfolioSections = ({ FullSet }) => (
   </>
 );
 
-/* Seperate these Portfolio based on skill // Web dev // AI machine learning // Mobile app (Full Stack) */
+/*
+  Portfolio component represents the portfolio page
+  It scrolls to top on mount and renders portfolio sections
+  and a bottom footer
+  Portfolio demos are categorized by skill (Web dev, AI, Mobile app)
+*/
 const Portfolio= () =>
 {
+  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0) 
   });
   
   return (
-    <div className='Demo'>
-      <div className='Demo__container'>
-          <PortfolioSections FullSet={DemoData} />
+    <>
+      {/* Wrapper div with class 'Demo' for styling */}
+      <div className='Demo'>
+        <div className='Demo__container'>
+            {/* Render portfolio sections with demo data */}
+            <PortfolioSections FullSet={DemoData} />
+        </div>
       </div>
-    </div>
+      {/* Render bottom footer component */}
+      <BottomFooter />
+    </>
   );
 }
 
+// Export Portfolio component as default
 export default Portfolio;

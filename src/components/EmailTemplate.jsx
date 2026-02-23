@@ -1,3 +1,11 @@
+// EmailTemplate is a JSX component that renders full HTML markup for a transactional email.
+// It uses table-based layout and inlined styles for maximum email client compatibility.
+// Note: Image sources currently point to localhost; update to absolute public URLs in production.
+// The template includes:
+// - Header with branding logos
+// - Hero image/logo
+// - Two call-to-action buttons (Contact and View Resume)
+// - Footer with company line
 const EmailTemplate = () => (
   <html dir="ltr" lang="en">
     {/* <head>
@@ -16,7 +24,9 @@ const EmailTemplate = () => (
       <meta name="x-apple-disable-message-reformatting" />
     </head> */}
 
-    <body style={{ backgroundColor: "rgb(255,255,255)" }}>
+
+    <body style={{backgroundColor:"#f5f2ecff"}}>
+      {/* Main email wrapper with neutral background color */}
       <table
         border="0"
         width="100%"
@@ -29,11 +39,13 @@ const EmailTemplate = () => (
           <tr>
             <td
               style={{
-                backgroundColor: "rgb(255,255,255)",
+
+                backgroundColor:"#f5f2ecff",
                 fontFamily:
                   '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
               }}
             >
+              {/* Hidden preview preheader text to improve inbox previews */}
               <div
                 style={{
                   display: "none",
@@ -96,7 +108,10 @@ const EmailTemplate = () => (
                               <img
                                 alt="TEKINTRALINKED"
                                 height="60"
-                                src="https://i.imgur.com/aeU7jHn.png"
+
+                                src="http://localhost:3000/images/TekIntraLinked-Logo-Only.png"
+                                // src="http://www.tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
+
                                 style={{
                                   display: "block",
                                   outline: "none",
@@ -111,7 +126,11 @@ const EmailTemplate = () => (
                               <img
                                 alt="TEKINTRALINKED"
                                 height="50"
-                                src="https://i.imgur.com/tZelQ9W.png"
+                                
+                                // src="http://www.tekintralinked.com/images/TekIntraLinked-Name-Dark.png"
+                                
+                                src="http://localhost:3000/images/TekIntraLinked-Name-Dark.png"
+
                                 style={{
                                   display: "block",
                                   outline: "none",
@@ -141,7 +160,10 @@ const EmailTemplate = () => (
                               <img
                                 alt="TEK"
                                 height="150"
-                                src="https://i.imgur.com/aeU7jHn.png"
+
+                                src="http://localhost:3000/images/TekIntraLinked-Logo-Only.png"
+
+                                // src="http://www.tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
                                 style={{
                                   display: "block",
                                   outline: "none",
@@ -188,7 +210,7 @@ const EmailTemplate = () => (
                                         lineHeight: "1.3",
                                         fontWeight: 700,
                                         color: "rgb(72,72,72)",
-                                        backgroundColor: "rgb(255,255,255)",
+                                        backgroundColor:"#f5f2ecff",
                                         borderRadius: 0.25 * 16,
                                         marginTop: 16,
                                         marginBottom: 16,
@@ -204,7 +226,7 @@ const EmailTemplate = () => (
                                         lineHeight: "1.4",
                                         color: "rgb(72,72,72)",
                                         padding: 24,
-                                        backgroundColor: "rgb(242,243,243)",
+                                        backgroundColor:"#f5f2ecff",
                                         borderRadius: 0.25 * 16,
                                         marginTop: 16,
                                         marginBottom: 16,
@@ -217,12 +239,19 @@ const EmailTemplate = () => (
                                       key decisions, and delivering systems that
                                       run reliably at scale. Execution-driven,
                                       adaptable, and focused on impact over
-                                      process. easily recommend him to any
-                                      host!”
+                                      process. 
                                     </p>
 
+
+
+
+
+
+                                    {/* Primary CTA: Contact Us */}
                                     <a
-                                      href="localhost:3000/contactus"
+                                      href="http://localhost:3000/ContactUs"
+
+                                      // href="http://tekintralinked.com/ContactUs"
                                       style={{
                                         lineHeight: "100%",
                                         textDecoration: "none",
@@ -230,7 +259,7 @@ const EmailTemplate = () => (
                                         maxWidth: "100%",
                                         msoPaddingAlt: 0,
                                         backgroundColor:
-                                          "rgba(114, 170, 239, 1)",
+                                          "rgba(158, 198, 242, 1)",
                                         borderRadius: 0.25 * 16,
                                         color: "rgb(255,255,255)",
                                         fontSize: 18,
@@ -276,6 +305,75 @@ const EmailTemplate = () => (
                                         </i>
                                       </span>
                                     </a>
+
+
+
+
+
+
+                                  <br/>
+
+
+
+                                    {/* Secondary CTA: View/download resume */}
+                                    <a
+                                      href="http://localhost:3000/ErickCabreraResume_.pdf"
+                                      
+                                      download="ErickCabreraResume.pdf"
+                                      style={{
+                                        lineHeight: "100%",
+                                        textDecoration: "none",
+                                        display: "block",
+                                        maxWidth: "100%",
+                                        msoPaddingAlt: 0,
+                                        backgroundColor:
+                                          "rgba(158, 178, 242, 1)",
+                                        borderRadius: 0.25 * 16,
+                                        color: "rgb(255,255,255)",
+                                        fontSize: 18,
+                                        paddingBottom: 19,
+                                        paddingTop: 19,
+                                        paddingRight: 30,
+                                        paddingLeft: 30,
+                                        textDecorationLine: "none",
+                                        textAlign: "center",
+                                      }}
+                                      target="_blank"
+                                    >
+                                      <span>
+                                        <i
+                                          style={{
+                                            msoFontWidth: "500%",
+                                            msoTextRaise: 28.5,
+                                          }}
+                                          hidden
+                                        >
+                                          &#8202;&#8202;&#8202;
+                                        </i>
+                                      </span>
+
+                                      <span
+                                        style={{
+                                          maxWidth: "100%",
+                                          display: "inline-block",
+                                          lineHeight: "120%",
+                                          msoPaddingAlt: 0,
+                                          msoTextRaise: 14.25,
+                                        }}
+                                      >
+                                        View my resume!
+                                      </span>
+
+                                      <span>
+                                        <i
+                                          style={{ msoFontWidth: "500%" }}
+                                          hidden
+                                        >
+                                          &#8202;&#8202;&#8202;&#8203;
+                                        </i>
+                                      </span>
+                                    </a>
+
                                   </tr>
                                 </tbody>
                               </table>
@@ -283,6 +381,7 @@ const EmailTemplate = () => (
                           </tr>
                         </tbody>
                       </table>
+                      {/* Divider between content and footer */}
                       <hr
                         style={{
                           width: "100%",
@@ -344,4 +443,5 @@ const EmailTemplate = () => (
     </body>
   </html>
 );
+// Export the email template component for use when sending emails
 export default EmailTemplate;

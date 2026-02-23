@@ -8,10 +8,10 @@ import { IoLogoReact } from "react-icons/io5";
 // ! Revise AI Video and ParkerUp Video.
 
 
-// ! ADD videos and photos to individual pages. 
-// ! Edit HTML Template to include a resume and maybe portfolio links.
+// ! Fix scrolling on demo pages. 
 // ! Post website. 
 // ! Redo videos to expel any inconsistencies such as recording or crop showcase. 
+
 
 
 // ! Add small icons on portfolio like the techstack under the photo.  
@@ -31,7 +31,7 @@ const DemoData = [
       </video>
     ),
     // probably change this to video.
-    label: "This is the Label",
+    // label: "This is the Label",
     path: "../Portfolio/FirstDemo",
     footerText:
     ( <>
@@ -53,10 +53,10 @@ const DemoData = [
             <source src="videos/ShortVideoDemo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <img src={`images/EncryptedWords.png`} className="MVPPhoto" />
+          <img src={`images/EncryptedWords.png`} className="EncryptedPhoto" />
       </div>
     ),
-    label: "This is the Label for ParkerUp",
+    // label: "This is the Label for ParkerUp",
     path: "../Portfolio/SecondDemo",
     footerText:
     (
@@ -77,7 +77,7 @@ const DemoData = [
             Your browser does not support the video tag.
           </video>
     ,
-    label: "This is the Label for IMAGE CLASSIFIER",
+    // label: "This is the Label for IMAGE CLASSIFIER",
     path: "../Portfolio/ThirdDemo",
     footerText:
     (

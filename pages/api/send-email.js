@@ -35,12 +35,6 @@ export default async function EmailHandler(req, res)
         to,
         subject,
         html,
-
-        // from:"erick.cabrera@tekintralinked.com",
-        // to: [`${email}`],
-        // to: [`ericks.site0@gmail.com`],
-        // subject: "Hello World",
-        // html: "<strong>It works!</strong>",
       }
     );
     

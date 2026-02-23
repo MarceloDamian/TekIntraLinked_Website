@@ -1,21 +1,30 @@
+// Import React and useEffect hook
 import React, {useEffect} from 'react';
-// import '../App.css';
+// Import SignUp page component
 import SignUp from '../pages/SignUp';
-// import './SignUp.css';
+// Import BottomFooter component
+import BottomFooter from "../src/components/BottomFooter";
 
-
+// ContactUs page component
 const ContactUs = () =>
 {
+  // Scroll to top on component mount
   useEffect(() => { 
     window.scrollTo(0, 0)
   }, []);
-  // Change all useLayoutEffect to useEffect
-  // Empty dependency array
+
+  // TODO: Change all useLayoutEffect to useEffect
+  // TODO: Use empty dependency array for effects
+
   return (
     <>
+      {/* Render SignUp component */}
       <SignUp/>
+      {/* Render BottomFooter component */}
+      <BottomFooter />
     </>
   );
 };
 
+// Export ContactUs component as default
 export default ContactUs;
