@@ -109,7 +109,7 @@ const EmailTemplate = () => (
                                 alt="TEKINTRALINKED"
                                 height="60"
 
-                                src="http://localhost:3000/images/TekIntraLinked-Logo-Only.png"
+                                src="http://www.Tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
                                 // src="http://www.tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
 
                                 style={{
@@ -129,7 +129,7 @@ const EmailTemplate = () => (
                                 
                                 // src="http://www.tekintralinked.com/images/TekIntraLinked-Name-Dark.png"
                                 
-                                src="http://localhost:3000/images/TekIntraLinked-Name-Dark.png"
+                                src="http://www.Tekintralinked.com/images/TekIntraLinked-Name-Dark.png"
 
                                 style={{
                                   display: "block",
@@ -161,7 +161,7 @@ const EmailTemplate = () => (
                                 alt="TEK"
                                 height="150"
 
-                                src="http://localhost:3000/images/TekIntraLinked-Logo-Only.png"
+                                src="http://www.Tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
 
                                 // src="http://www.tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
                                 style={{
@@ -249,7 +249,7 @@ const EmailTemplate = () => (
 
                                     {/* Primary CTA: Contact Us */}
                                     <a
-                                      href="http://localhost:3000/ContactUs"
+                                      href="http://www.Tekintralinked.com/ContactUs"
 
                                       // href="http://tekintralinked.com/ContactUs"
                                       style={{
@@ -317,7 +317,7 @@ const EmailTemplate = () => (
 
                                     {/* Secondary CTA: View/download resume */}
                                     <a
-                                      href="http://localhost:3000/ErickCabreraResume_.pdf"
+                                      href="http://www.Tekintralinked.com/ErickCabreraResume_.pdf"
                                       
                                       download="ErickCabreraResume.pdf"
                                       style={{
