@@ -1,6 +1,12 @@
 // Import useLayoutEffect to manage scroll and BottomFooter component
-import {useLayoutEffect} from 'react';
+import React, {useLayoutEffect} from 'react';
 import BottomFooter from "../../src/components/BottomFooter";
+
+import techData from '../../src/components/techData';
+import TechIcon from '../../src/components/TechIcon';
+
+import SmallTechIcons from '../../src/components/SmallTechIcons';
+import { demoTechs } from '../../src/components/techConfig';
 
 // SecondDemo page showcases the ParkerUp mobile platform
 export default function SecondDemo() {
@@ -8,6 +14,11 @@ export default function SecondDemo() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
+  const desiredOrder = ["DART","BASH"];
+
+  const orderedTechs = desiredOrder.map(label => techData.find(tech => tech.label === label)
+  ).filter(Boolean); // filter out any undefined if label not found
+
   return (
     <>
     <div className='SecondDemo_'>
@@ -21,19 +32,57 @@ export default function SecondDemo() {
 
       {/* Two demo clips showcasing app functionality */}
       <div className="VideoContainer">
-        <div className="FirstClip">
-          <video  autoPlay loop muted playsInline>
-            <source src="/videos/FirstClip.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-          </video>
+
+          <div className="FirstClip">
+            <video  autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+              <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/FirstClip.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+
+            <div className="SecondClip">
+              <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+                <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/SecondClip.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+
+        <div className="dark-overlay">
+          <a 
+            href="https://github.com/MarceloDamian/TekIntraLinked_Website"
+          >                
+            <div class="terminal-typing">
+              VIEW CODE
+            </div>  
+          </a>    
+        </div>
+      </div>
+
+      {/* MVP image showcasing app prototype */}
+
+      <div className="MVPWithIcons">
+        
+        <div className='MVPPhotoContainer'>
+          
+          <img className='MVPPhoto' src="/images/MVPPhoto.jpg"/>
+
+          <div className="dark-overlay">
+            <a 
+              href="https://github.com/MarceloDamian/ParkerUp"
+            >                
+                <div class="terminal-typing">
+                  VIEW CODE
+                </div>  
+              </a>  
+          </div>
+
         </div>
 
-        <div className="SecondClip">
-          <video autoPlay loop muted playsInline>
-            <source src="/videos/SecondClip.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-          </video>
-        </div>
+        <SmallTechIcons labels={demoTechs["SecondDemo"] || []} 
+          path_={'/Portfolio/SecondDemo'}
+          size={60} 
+        />
+
       </div>
 
       {/* Description of role and system design approach */}
@@ -60,13 +109,8 @@ export default function SecondDemo() {
           and Enhanced constraint modeling (zoning, timing, availability density).
         </h5> 
       </div>
-
-      {/* MVP image showcasing app prototype */}
-      <div className='MVPPhotoContainer'>
-        <img className='MVPPhoto' src="/images/MVPPhoto.jpg"/>
-      </div>
     </div>
-    
+        
     <BottomFooter/>
     </>
   );

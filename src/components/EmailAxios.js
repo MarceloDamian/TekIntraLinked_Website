@@ -8,6 +8,11 @@ import PropTypes from "prop-types";
 import EmailTemplate from './EmailTemplate.jsx';
 import ReactDOMServer from 'react-dom/server';
 
+const validateEmail = (email) => {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(email);
+};
+
 // EmailSender sends an email using the Next.js API route and a rendered HTML email template
 const EmailSender = (
   { buttonText,
@@ -24,6 +29,11 @@ const EmailSender = (
   // Send email handler: renders EmailTemplate to HTML and posts to /api/send-email
   const sendEmail = async (e) => {
     e.preventDefault();
+    
+    if (!validateEmail(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
 
     try {
       const htmlString = ReactDOMServer.renderToStaticMarkup(<EmailTemplate />);
@@ -36,6 +46,7 @@ const EmailSender = (
         html: htmlString,
       });
       
+      
       if (response.status === 200) 
       {
         setStatus('OK');
@@ -47,6 +58,18 @@ const EmailSender = (
     }
   };
 
+  const handleKeyDown = (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    if (!validateEmail(email)) 
+    {
+      alert('Please enter a valid email address');
+    return;
+    }
+    sendEmail(e); 
+  }
+  };
+
   // Render CTA button and input form; show success message when email sent
   return (
     <>
@@ -55,16 +78,16 @@ const EmailSender = (
           <>
             <div className="lets-chat-button">
               <Button
-              buttonStyle={buttonStyle}
-              buttonSize={buttonSize}
-              linkTo="/ContactUs"
+                buttonStyle={buttonStyle}
+                buttonSize={buttonSize}
+                linkTo="/ContactUs"
               >
-              {buttonText}
+                {buttonText}
               </Button>
             </div>
 
             {/* Footer label hidden once email is sent */}
-            <p className="thin-gradient-line"> {footer=""}</p>
+            <p className="thin-gradient-line"> {(footer = "")}</p>
             <div className="EmailSentSuccess">
               {/* Success message shown after email send */}
               <h2>Thank you! A copy has been sent.</h2>
@@ -91,13 +114,14 @@ const EmailSender = (
                 placeholder="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
 
               <Button
                 buttonStyle={buttonStyle}
                 buttonSize={"btn--Large"}
                 onClick={sendEmail}
-                linkTo = '/'
+                linkTo="/"
               >
                 {(buttonText = "Send It Now")}
               </Button>
@@ -117,4 +141,3 @@ EmailSender.propTypes = {
   footer: PropTypes.string.isRequired,
 };
 export default EmailSender;
-

@@ -1,13 +1,28 @@
+
+
+
 // Import useLayoutEffect to scroll to top on mount and BottomFooter component
-import {useLayoutEffect} from 'react';
+import React,{useLayoutEffect} from 'react';
 import BottomFooter from "../../src/components/BottomFooter";
 
+import techData from '../../src/components/techData';
+import TechIcon from '../../src/components/TechIcon';
+
+import SmallTechIcons from '../../src/components/SmallTechIcons';
+import { demoTechs } from '../../src/components/techConfig';
+
 // ThirdDemo page showcases a neural network image classification project
-export default function ThirdDemo() {
+export default function ThirdDemo() 
+{
   // Scroll to top when component mounts
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
+  const desiredOrder = ["PYTHON","BASH"];
+
+  const orderedTechs = desiredOrder.map(label => techData.find(tech => tech.label === label)
+  ).filter(Boolean); // filter out any undefined if label not found
+
   return (
     <>
     <div className = "ThirdDemo_">
@@ -19,11 +34,48 @@ export default function ThirdDemo() {
 
       {/* Demo clip from Weights & Biases (WANDB) showcasing training/metrics */}
       <div className='WANDB'>
-        <video autoPlay loop muted playsInline>
-          <source src="/videos/WANDB.mp4" type="video/mp4" />
+        <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+          <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/WANDB.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
+
+        <div className="dark-overlay">
+          <a 
+            href="https://github.com/MarceloDamian/MLNeuralNetwork"
+          >                
+            <div class="terminal-typing">
+              VIEW CODE
+            </div>  
+          </a>    
+        </div>
+
       </div>
+
+
+      <div className="NNwithTechIcons">
+        {/* Running network demo clip */}
+        <div className='RunningNeuralNet'>
+          
+          <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+            <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/RunningNeuralNet.mp4" type="video/mp4" />            Your browser does not support the video tag.
+          </video>
+
+          <div className="dark-overlay">
+            <a 
+              href="https://github.com/MarceloDamian/TekIntraLinked_Website"
+            >                
+              <div class="terminal-typing">
+                VIEW CODE
+              </div>  
+            </a>    
+          </div>
+
+        </div>
+
+        <SmallTechIcons labels={demoTechs["ThirdDemo"] || []} path_={'/Portfolio/ThirdDemo'} size={60} />
+
+      </div>
+
 
       {/* Descriptive text about role and project objectives */}
       <div className="Demo_Text">
@@ -49,14 +101,6 @@ export default function ThirdDemo() {
           correctness end-to-end, and ship software that proves 
           competence through execution.
         </h5> 
-      </div>
-
-      {/* Running network demo clip */}
-      <div className='RunningNeuralNet'>
-        <video autoPlay loop muted playsInline>
-          <source src="/videos/RunningNeuralNet.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
       </div>
 
     </div>

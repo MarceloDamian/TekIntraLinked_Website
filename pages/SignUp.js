@@ -28,11 +28,11 @@ function SignUp() {
     // Retrieve email service config from environment variables
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID; 
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID; 
 
     // Log service config and form data for debugging
-    console.log(serviceId, templateId, userID);
-    console.log(name, email, message);
+    //console.log(serviceId, templateId, userId);
+    //console.log(name, email, message);
 
     // Validate form fields
     if (!name || !email || !message)
@@ -47,7 +47,7 @@ function SignUp() {
     {
       service_id: serviceId,
       template_id: templateId,
-      user_id: userID,
+      user_id: userId,
       template_params: {
         from_name: name,
         from_email: email,
@@ -55,6 +55,7 @@ function SignUp() {
         message: message,
       },
     };
+
 
     try {
       // Send email via emailjs API
@@ -83,8 +84,8 @@ function SignUp() {
     <>
       {/* Form container with background video */}
       <div className="FormtoSend">
-        <video autoPlay loop muted>
-          <source src="../../videos/BackgroundVideo1_.mp4" type="video/mp4" />
+        <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+          <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/BackgroundVideo1_.mp4" type="video/mp4" />
         </video>
 
         {/* Email form with conditional success message */}

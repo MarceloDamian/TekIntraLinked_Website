@@ -6,6 +6,14 @@
 // - Hero image/logo
 // - Two call-to-action buttons (Contact and View Resume)
 // - Footer with company line
+// EmailTemplate is a JSX component that renders full HTML markup for a transactional email.
+// It uses table-based layout and inlined styles for maximum email client compatibility.
+// Note: Image sources currently point to localhost; update to absolute public URLs in production.
+// The template includes:
+// - Header with branding logos
+// - Hero image/logo
+// - Two call-to-action buttons (Contact and View Resume)
+// - Footer with company line
 const EmailTemplate = () => (
   <html dir="ltr" lang="en">
     {/* <head>
@@ -26,6 +34,7 @@ const EmailTemplate = () => (
 
 
     <body style={{backgroundColor:"#f5f2ecff"}}>
+      {/* Main email wrapper with neutral background color */}
       {/* Main email wrapper with neutral background color */}
       <table
         border="0"
@@ -110,8 +119,6 @@ const EmailTemplate = () => (
                                 height="60"
 
                                 src="http://www.Tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
-                                // src="http://www.tekintralinked.com/images/TekIntraLinked-Logo-Only.png"
-
                                 style={{
                                   display: "block",
                                   outline: "none",
@@ -382,6 +389,7 @@ const EmailTemplate = () => (
                         </tbody>
                       </table>
                       {/* Divider between content and footer */}
+                      {/* Divider between content and footer */}
                       <hr
                         style={{
                           width: "100%",
@@ -443,5 +451,6 @@ const EmailTemplate = () => (
     </body>
   </html>
 );
+// Export the email template component for use when sending emails
 // Export the email template component for use when sending emails
 export default EmailTemplate;

@@ -4,12 +4,12 @@ import Link from "next/link";
 import PropTypes from 'prop-types';
 
 // TechIcon component renders a single technology icon with a link
-const TechIcon = ({icon, label, path, text=''}) =>
+const TechIcon = ({icon, label, path}) =>
 {
   return (
     <>
       {/* List item for individual tech icon with spacing */}
-      <li className='tech__item'> 
+      <div className='tech__item'> 
         {/* Link wraps the icon and navigates to the specified path or home '/' if none provided */}
         <Link className='tech__item__link' href={path|| '/'} >
           {/* Figure element with data-category attribute for label */}
@@ -18,7 +18,7 @@ const TechIcon = ({icon, label, path, text=''}) =>
             {icon}
           </figure>
         </Link>
-      </li>
+      </div>
     </>
   );
 };

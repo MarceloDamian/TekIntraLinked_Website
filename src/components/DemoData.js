@@ -3,30 +3,31 @@
 import { IoLogoReact } from "react-icons/io5";
 // import "./Demo.css";
 
-// ! Revise Footertexts to be more specific to each project.
-// ! Revise Resume
-// ! Revise AI Video and ParkerUp Video.
+import { demoTechs } from './techConfig';
 
 
-// ! Fix scrolling on demo pages. 
-// ! Post website. 
-// ! Redo videos to expel any inconsistencies such as recording or crop showcase. 
+//! Change/Update the revised Resume here 
+//! Post it into ec2 and github. 
+
+
+// ! REDO and post tekintralinked video inside firstdemo.css
+// ! Crop out mobile videos to remove corners. 
+// ! Use AI to remove all comments
+// ! Use AI to add all comments on code. 
 
 
 
-// ! Add small icons on portfolio like the techstack under the photo.  
-// ! A Demo Button that links it to the github repository for easier access
-// ! Refactor and clean up code. 
 
-// ! Comment on the code. 
-// ! Figure out what t. microservice would be better to create and instance, as well as which one is the most affordable. 
+
+// ! Refactor code on down down down time. Low priority.  
+
 
 const DemoData = [
   {
-    headerText: "TEKINTRALINKED",
+    headerText:"TEKINTRALINKED",
     icon: (
-      <video className="Demo__item__img" autoPlay loop muted playsInline>
-        <source src="videos/DemoVideo.mp4" type="video/mp4" />
+      <video className="Demo__item__img" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+        <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/DemoVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -44,14 +45,14 @@ const DemoData = [
         </h4>
       </>
     ),
+    demoLabel:"FirstDemo",
   },
   {
-    headerText: "ParkerUp",
+    headerText:"PARKERUP",
     icon: (
       <div className="Second_Demo_Container">
-          <video  className="Second_Demo__item__img" autoPlay loop muted playsInline>
-            <source src="videos/ShortVideoDemo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+          <video  className="Second_Demo__item__img" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+            <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/ShortVideoDemo.mp4" type="video/mp4" />            Your browser does not support the video tag.
           </video>
           <img src={`images/EncryptedWords.png`} className="EncryptedPhoto" />
       </div>
@@ -68,13 +69,16 @@ const DemoData = [
           movement into real-time intelligence at scale.
         </h4>
       </>
-    ) 
+    ),
+    
+    demoLabel:"SecondDemo",
+
+    
   },
   {
     headerText: "AI/ML IMAGE CLASSIFIER",
-    icon: <video  className="Demo__item__img" autoPlay loop muted playsInline>
-            <source src="videos/RunningNeuralNet.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+    icon: <video  className="Demo__item__img" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+            <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/RunningNeuralNet.mp4" type="video/mp4" />            Your browser does not support the video tag.
           </video>
     ,
     // label: "This is the Label for IMAGE CLASSIFIER",
@@ -88,7 +92,11 @@ const DemoData = [
         descent. Optimized hyperparameters, enabled flexible multilayer architectures, and applied 
         robust preprocessing and data imputation to improve training efficiency.
       </h4>
-    )
+    ),
+    
+    demoLabel:"ThirdDemo",
+
+
   },
 
   // Below is other items that are not part of the main items

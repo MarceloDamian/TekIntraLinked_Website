@@ -6,8 +6,9 @@ const Main_Section = ()=>{
   return (
     <div className='Video-Container'>
       {/* Background video looped and muted */}
-      <video autoPlay loop muted > 
-        <source src="../../videos/HyperLapse.mp4" type="video/mp4"/>
+
+      <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+        <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/Hyperlapse.mp4" type="video/mp4"/>
       </video>
 
       {/* Branding image overlay */}

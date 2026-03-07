@@ -9,6 +9,9 @@ import DemoData from '../src/components/DemoData';
 // Import BottomFooter component for page footer
 import BottomFooter from '../src/components/BottomFooter';
 
+import { demoTechs } from './../src/components/techConfig';
+import TechIcons from './../src/components/SmallTechIcons';
+
 
 // TODO: Possibly use MouseWheel Control from swiperjs.com to improve demo navigation
 // TODO: Consider changing background color to a dark theme
@@ -23,12 +26,15 @@ const PortfolioSections = ({ FullSet }) => (
         <DemoIcon
           key={index}
           index={index}
+          headerText={demo.headerText}
           icon={demo.icon}
           // label={demo.label} // label currently unused
           path={demo.path}
-          headerText={demo.headerText}
           footerText={demo.footerText}
+          demoLabel={demo.demoLabel}
         />
+          // <TechIcons labels={demoTechs.firstDemo} size={60} />
+
       ))
     }
   </>
@@ -51,10 +57,10 @@ const Portfolio= () =>
     <>
       {/* Wrapper div with class 'Demo' for styling */}
       <div className='Demo'>
-        <div className='Demo__container'>
+        {/* <div className='Demo__container'> */}
             {/* Render portfolio sections with demo data */}
             <PortfolioSections FullSet={DemoData} />
-        </div>
+        {/* </div> */}
       </div>
       {/* Render bottom footer component */}
       <BottomFooter />

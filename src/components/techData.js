@@ -8,7 +8,7 @@ import { IoLogoReact } from "react-icons/io5";
 // techData is an array of technologies displayed in the Tech carousel
 const techData = [
   {
-    icon: <img src={`images/PythonLogo.png`} className="python-icon" />,
+    icon: <img src={`/images/PythonLogo.png`} className="python-icon" />,
     label: "PYTHON",
     path: "/Portfolio",
   },
@@ -23,7 +23,7 @@ const techData = [
     path: "/Portfolio",
   },
   {
-    icon: <img src={`images/DartLogo.png`} alt="Dart" className="Dart-icon"/>,
+    icon: <img src={`/images/DartLogo.png`} alt="Dart" className="Dart-icon"/>,
     label: "DART",
     path: "/Portfolio",
   },

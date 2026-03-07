@@ -74,10 +74,12 @@
 
 .input::placeholder {
   font-family: initial;
+
 }
 
 .textarea::placeholder {
   font-family: "Times New Roman", Times, serif;
+
 }
 .Centering-Button {
   display: flex;

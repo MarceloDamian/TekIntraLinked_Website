@@ -1,5 +1,7 @@
+
 // This is the frontend code using resend directly.
 import {Resend} from 'resend';
+
 
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
@@ -14,9 +16,6 @@ export default async function EmailHandler(req, res)
     res.setHeader('Allow', ['POST']);
 
     return res.status(405).json({ message: `Method ${req.method} not allowed` });
-
-    // res.status(405).json({ message: 'Method Not Allowed' });
-    // return;
   }
 
 
