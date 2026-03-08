@@ -51,10 +51,10 @@ export default function SecondDemo() {
           <a 
             href="https://github.com/MarceloDamian/TekIntraLinked_Website"
           >                
-            <div class="terminal-typing">
+            <div className="terminal-typing">
               VIEW CODE
             </div>  
-          </a>    
+          </a>     
         </div>
       </div>
 
@@ -70,7 +70,7 @@ export default function SecondDemo() {
             <a 
               href="https://github.com/MarceloDamian/ParkerUp"
             >                
-                <div class="terminal-typing">
+                <div className="terminal-typing">
                   VIEW CODE
                 </div>  
               </a>  

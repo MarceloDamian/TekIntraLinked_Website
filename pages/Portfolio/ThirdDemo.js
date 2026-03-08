@@ -43,10 +43,10 @@ export default function ThirdDemo()
           <a 
             href="https://github.com/MarceloDamian/MLNeuralNetwork"
           >                
-            <div class="terminal-typing">
+            <div className="terminal-typing">
               VIEW CODE
             </div>  
-          </a>    
+          </a>     
         </div>
 
       </div>
@@ -64,7 +64,7 @@ export default function ThirdDemo()
             <a 
               href="https://github.com/MarceloDamian/TekIntraLinked_Website"
             >                
-              <div class="terminal-typing">
+              <div className="terminal-typing">
                 VIEW CODE
               </div>  
             </a>    

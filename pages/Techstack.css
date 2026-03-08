@@ -88,7 +88,13 @@
   right: 0%;
   width: 132%;
 
-  padding: 6px 8px;
+  /* padding: 6px 8px; */
+  padding-top:6px;
+  padding-bottom:6px;
+  
+  padding-left: 3px;
+  padding-right: 8px;
+
   font-size: 1.1rem;
 
   /* Used rem for scalable font size */

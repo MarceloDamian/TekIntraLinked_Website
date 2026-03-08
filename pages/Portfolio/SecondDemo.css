@@ -250,9 +250,11 @@
     padding-right: 0.5cm;
     padding-left: 0.5cm;
 
-    height: 70vh;
+    height: 90vh;
     margin-top:-1.5cm;
     margin-bottom: 3cm;
+
+    /* background-color: aquamarine; */
 
 
     /* background-color: #9ca5b5d9; */
@@ -262,14 +264,6 @@
   .TitleContainer h1 {
     margin-left: 0.5cm;
   }
-
-  /* .TitleContainer h2 */
-  /* { */
-  /* margin-bottom:1cm; */
-  /* margin-top:0.5cm; */
-  /* } */
-
-
 
   .FirstClip {
     display: flex;

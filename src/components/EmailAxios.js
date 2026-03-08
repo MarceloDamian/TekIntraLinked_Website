@@ -39,7 +39,7 @@ const EmailSender = (
       const htmlString = ReactDOMServer.renderToStaticMarkup(<EmailTemplate />);
 
       const response = await axios.post("/api/send-email", {
-        from: "erick.cabrera@tekintralinked.com",
+        from: "no-reply@tekintralinked.com",
         // to: [`officialerickpage@gmail.com`],
         to: [email],
         subject: "Tekintralinked",

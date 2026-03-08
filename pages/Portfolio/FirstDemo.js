@@ -48,9 +48,9 @@ export default function FirstDemo() {
               <a 
                 href="https://github.com/MarceloDamian/TekIntraLinked_Website"
               >
-                <div class="terminal-typing">
+                <div className="terminal-typing">
                   VIEW CODE
-                </div>  
+                </div>   
               </a>  
             </div> 
 
@@ -71,7 +71,7 @@ export default function FirstDemo() {
               <a 
                 href="https://github.com/MarceloDamian/TekIntraLinked_Website"
               >                
-                <div class="terminal-typing">
+                <div className="terminal-typing">
                   VIEW CODE
                 </div>  
               </a>  

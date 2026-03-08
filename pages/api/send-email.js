@@ -30,7 +30,7 @@ export default async function EmailHandler(req, res)
     const {data} = await resend.emails.send
     (
       {
-        from:"erick.cabrera@tekintralinked.com",
+        from:"no-reply@tekintralinked.com",
         to,
         subject,
         html,
