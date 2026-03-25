@@ -81,13 +81,13 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](public/images/home.png)
 
 ### Portfolio / Projects
-![Portfolio Page](screenshots/portfolio.png)
+![Portfolio Page](public/images/portfolio.png)
 
 ### Contact
-![Contact Page](screenshots/contact.png)
+![Contact Page](public/images/contact.png)
 
 
 ## Tech Stack
