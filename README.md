@@ -78,7 +78,7 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Screenshots
+## Images
 
 ### Home Page
 ![Home Page](public/images/Home_Page.png)
