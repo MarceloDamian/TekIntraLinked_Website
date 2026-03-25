@@ -81,7 +81,8 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 ## Screenshots
 
 ### Home Page
-![Home Page](/../../../public/images/Home_Page.png)
+![Home Page](/../../public/images/Home_Page.png)
+
 
 ### Portfolio / Projects
 ![Portfolio Page](public/images/portfolio.png)
