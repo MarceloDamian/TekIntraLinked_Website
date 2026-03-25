@@ -80,8 +80,6 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Screenshots
 
-> Add screenshots of your application below to give visitors a preview of the project.
-
 ### Home Page
 ![Home Page](screenshots/home.png)
 
@@ -91,15 +89,6 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 ### Contact
 ![Contact Page](screenshots/contact.png)
 
----
-
-> **How to add screenshots:**
-> 1. Create a folder called `screenshots` in the root of your project.
-> 2. Add your image files (`.png`, `.jpg`, etc.) to that folder.
-> 3. Update the filenames above to match your actual image file names.
-> 4. Commit the `screenshots` folder along with your README.
-
----
 
 ## Tech Stack
 
