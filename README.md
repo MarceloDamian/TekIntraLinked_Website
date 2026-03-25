@@ -1,41 +1,97 @@
-
-
-<!-- Holding Company For Tech Ventures [](). -->
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+# Tekintralinked LLC v.2.0
+ 
+A full-stack web application that serves as both a professional portfolio showcasing past projects and the digital presence of Tekintralinked LLC as a holding company. Built with Next.js, React, and Node.js.
+ 
+---
+ 
+## 📋 Table of Contents
+ 
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Running Locally](#running-locally)
+- [Tech Stack](#tech-stack)
+- [License](#license)
+ 
+---
+ 
+## Prerequisites
+ 
+Before you begin, ensure you have the following installed on your machine:
+ 
+- [Node.js](https://nodejs.org/) (latest LTS version recommended)
+- [npm](https://www.npmjs.com/) (comes bundled with Node.js)
+- [React](https://react.dev/) (installed automatically via npm)
+- [Next.js](https://nextjs.org/) (installed automatically via npm)
+ 
+> **Note:** React and Next.js do not need to be installed globally — they will be installed as project dependencies when you run `npm install`.
+ 
+---
+ 
 ## Getting Started
-
-First, run the development server:
-
+ 
+### 1. Clone the Repository
+ 
+```bash
+git clone https://github.com/marcelodamian/tekintralinked-v2.git
+cd tekintralinked-v2
+```
+ 
+### 2. Install Dependencies
+ 
+```bash
+npm install
+```
+ 
+### 3. Set Up Environment Variables
+ 
+Create a `.env.local` file in the root of the project and add the following variables:
+ 
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id_here
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id_here
+NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id_here
+```
+ 
+> **How to get these values:** Log in to your [EmailJS](https://www.emailjs.com/) account and navigate to your dashboard. You will find your Service ID, Template ID, and User (Public) Key there.
+ 
+> ⚠️ **Never commit your `.env.local` file to version control.** Make sure `.env.local` is listed in your `.gitignore`.
+ 
+### 4. Run the Development Server
+ 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+ 
+---
+ 
+## Environment Variables
+ 
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | Your EmailJS Service ID |
+| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | Your EmailJS Email Template ID |
+| `NEXT_PUBLIC_EMAILJS_USER_ID` | Your EmailJS Public User Key |
+ 
+---
+ 
+## Tech Stack
+ 
+| Technology | Purpose |
+|---|---|
+| [Next.js](https://nextjs.org/) | Full-stack React framework |
+| [React](https://react.dev/) | UI component library |
+| [Node.js](https://nodejs.org/) | JavaScript runtime |
+| [EmailJS](https://www.emailjs.com/) | Client-side email functionality |
+ 
+---
+ 
+## License
+ 
+© 2026 Tekintralinked LLC. All Rights Reserved.
+ 
+This project and its source code are the exclusive property of Tekintralinked LLC. No part of this codebase may be reproduced, distributed, modified, or used in any form without the express written permission of Tekintralinked LLC.
+ 
+Unauthorized copying, forking, or reuse of this code, in whole or in part, is strictly prohibited.
