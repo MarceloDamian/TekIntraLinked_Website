@@ -85,10 +85,10 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 
 ### Portfolio / Projects
-![Portfolio Page](public/images/portfolio.png)
+![Portfolio Page](public/images/Portfolio.png)
 
 ### Contact
-![Contact Page](public/images/contact.png)
+![Contact Page](public/images/Contact.png)
 
 
 ## Tech Stack
