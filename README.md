@@ -104,7 +104,7 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Credentials For IMAGES/VIDEOS:
 
-Technology Stock Videos by Vecteezy:(https://www.vecteezy.com/free-videos/technology)
+[Technology Stock Videos by Vecteezy](https://www.vecteezy.com/free-videos/technology)
 
 ---
 
