@@ -101,8 +101,11 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 | [EmailJS](https://www.emailjs.com/) | Client-side email functionality |
 
 ---
-##Credentials For IMAGES/VIDEOS:
-![Technology Stock Videos by Vecteezy](https://www.vecteezy.com/free-videos/technology)
+
+## Credentials For IMAGES/VIDEOS:
+
+Technology Stock Videos by Vecteezy:(https://www.vecteezy.com/free-videos/technology)
+
 ---
 
 ## License
