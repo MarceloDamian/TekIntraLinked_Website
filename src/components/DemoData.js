@@ -54,7 +54,7 @@ const DemoData = [
           <video  className="Second_Demo__item__img" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
             <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/ShortVideoDemo.mp4" type="video/mp4" />            Your browser does not support the video tag.
           </video>
-          <img src={`images/EncryptedWords.png`} className="EncryptedPhoto" />
+          <img src={`images/EncryptedWords.webp`} className="EncryptedPhoto" />
       </div>
     ),
     // label: "This is the Label for ParkerUp",

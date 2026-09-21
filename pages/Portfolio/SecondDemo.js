@@ -64,7 +64,7 @@ export default function SecondDemo() {
         
         <div className='MVPPhotoContainer'>
           
-          <img className='MVPPhoto' src="/images/MVPPhoto.jpg"/>
+          <img className='MVPPhoto' src="/images/MVPPhoto.webp"/>
 
           <div className="dark-overlay">
             <a 
