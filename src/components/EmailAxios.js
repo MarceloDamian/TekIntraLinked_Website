@@ -5,9 +5,6 @@ import React, { useState } from "react";
 import Button from "./Button_";
 import PropTypes from "prop-types";
 
-import EmailTemplate from './EmailTemplate.jsx';
-import ReactDOMServer from 'react-dom/server';
-
 const validateEmail = (email) => {
   const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return re.test(email);
@@ -36,24 +33,19 @@ const EmailSender = (
     }
 
     try {
-      const htmlString = ReactDOMServer.renderToStaticMarkup(<EmailTemplate />);
+      // Only the recipient is sent; the subject and body are fixed server-side.
+      const response = await axios.post("/api/send-email", { to: email });
 
-      const response = await axios.post("/api/send-email", {
-        from: "no-reply@tekintralinked.com",
-        // to: [`officialerickpage@gmail.com`],
-        to: [email],
-        subject: "Tekintralinked",
-        html: htmlString,
-      });
-      
-      
-      if (response.status === 200) 
+      if (response.status === 200)
       {
         setStatus('OK');
-      } 
-      console.log('Email sent:', email);
-      console.log('Email sent:', response.data);
+      }
     } catch (error) {
+      if (error.response?.status === 429) {
+        alert('Too many requests. Please try again later.');
+      } else {
+        alert('Sorry, we could not send that right now. Please try again.');
+      }
       console.error('Error sending email:', error);
     }
   };
