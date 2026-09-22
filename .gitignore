@@ -56,3 +56,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# pm2 config lives on the server and has held secrets; never commit it
+ecosystem.config.js

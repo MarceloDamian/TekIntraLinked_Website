@@ -25,15 +25,6 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Retrieve email service config from environment variables
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID; 
-
-    // Log service config and form data for debugging
-    //console.log(serviceId, templateId, userId);
-    //console.log(name, email, message);
-
     // Validate form fields
     if (!name || !email || !message)
     {
@@ -42,41 +33,23 @@ function SignUp() {
       return;
     }
 
-    // Prepare data payload for email service
-    const data = 
-    {
-      service_id: serviceId,
-      template_id: templateId,
-      user_id: userId,
-      template_params: {
-        from_name: name,
-        from_email: email,
-        to_name: "Erick Cabrera",
-        message: message,
-      },
-    };
-
-
     try {
-      // Send email via emailjs API
-      const res = await axios.post(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        data,
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-      // If successful, update status
-      if (res.status === 200) 
+      // Posts to our own API route, which holds the credentials server-side
+      // and applies rate limiting. Nothing sensitive reaches the browser.
+      const res = await axios.post("/api/contact", { name, email, message });
+
+      if (res.status === 200)
       {
         setStatus('OK');
-      } 
-    } 
+      }
+    }
     catch (error) {
-      // Log any errors
-      console.error(error, "Error sending email", error.response.data);
+      if (error.response?.status === 429) {
+        alert('Too many messages. Please try again later.');
+      } else {
+        alert('Sorry, your message could not be sent. Please try again.');
+      }
+      console.error('Error sending message:', error);
     }
   };
 
