@@ -9,11 +9,21 @@ const TechIcon = ({icon, label, path}) =>
   return (
     <>
       {/* List item for individual tech icon with spacing */}
-      <div className='tech__item'> 
-        {/* Link wraps the icon and navigates to the specified path or home '/' if none provided */}
-        <Link className='tech__item__link' href={path|| '/'} >
+      <div className='tech__item'>
+        {/* The label previously lived only in data-category, which never reaches
+            the accessibility tree, so these links announced as "link" or as the
+            image filename. aria-label gives each one a real name. */}
+        <Link
+          className='tech__item__link'
+          href={path|| '/'}
+          aria-label={label}
+        >
           {/* Figure element with data-category attribute for label */}
-          <figure className='tech__item__pic-wrap' data-category={label}>
+          <figure
+            className='tech__item__pic-wrap'
+            data-category={label}
+            aria-hidden="true"
+          >
             {/* Render the icon element passed as prop */}
             {icon}
           </figure>

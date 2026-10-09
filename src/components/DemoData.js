@@ -36,13 +36,13 @@ const DemoData = [
     path: "../Portfolio/FirstDemo",
     footerText:
     ( <>
-        <h4>
+        <p className="demo-card-text">
           Tekintralinked is a self-founded engineering venture created to 
           demonstrate real-world software ownership, infrastructure control, 
           and production deployment. 
           It is a production-deployed system designed to prove
           execution, resilience, and technical depth.        
-        </h4>
+        </p>
       </>
     ),
     demoLabel:"FirstDemo",
@@ -54,7 +54,7 @@ const DemoData = [
           <video  className="Second_Demo__item__img" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
             <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/ShortVideoDemo.mp4" type="video/mp4" />            Your browser does not support the video tag.
           </video>
-          <img src={`images/EncryptedWords.webp`} className="EncryptedPhoto" />
+          <img src={`images/EncryptedWords.webp`} alt="Screenshot of the Encrypted Words app showing a scrambled message over a map" className="EncryptedPhoto" />
       </div>
     ),
     // label: "This is the Label for ParkerUp",
@@ -62,12 +62,12 @@ const DemoData = [
     footerText:
     (
       <>
-        <h4>
+        <p className="demo-card-text">
           Architected and shipped a cross-platform mobile app using Flutter and Dart, 
           powering a peer-to-peer, community-driven navigation system. Orchestrated 
           8+ API integrations (Firebase, Google Maps, Google Cloud, etc.) to turn real-world 
           movement into real-time intelligence at scale.
-        </h4>
+        </p>
       </>
     ),
     
@@ -85,13 +85,13 @@ const DemoData = [
     path: "../Portfolio/ThirdDemo",
     footerText:
     (
-      <h4>
+      <p className="demo-card-text">
         Built an end-to-end, object-oriented neural network in pure Python and NumPy, 
         achieving over 80% accuracy on the MNIST dataset for handwritten digit classification. 
         Implemented numerically stable activations, He initialization, and momentum-based gradient 
         descent. Optimized hyperparameters, enabled flexible multilayer architectures, and applied 
         robust preprocessing and data imputation to improve training efficiency.
-      </h4>
+      </p>
     ),
     
     demoLabel:"ThirdDemo",

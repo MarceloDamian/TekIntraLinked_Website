@@ -5,7 +5,8 @@
   background: #ffffff15;
 }
 
-.tech h1 {
+.tech h1,
+.tech h2 {
   font-size: 75px;
   color: antiquewhite;
   text-align: center;

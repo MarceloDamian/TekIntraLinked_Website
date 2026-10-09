@@ -24,16 +24,23 @@ const DemoIcon = ({index, icon, path, headerText, footerText, demoLabel,
 
   return (
     <div className="Demo_Wrapper">
-      {/* Header text for the demo */}
-      <h1>{headerText}</h1>
-      <li className={`Demo__item ${alignmentClass}`}>
-        
+      {/* h2, not h1: these render inside a .map, so three of them on one page
+          left the document with three top-level headings. */}
+      <h2>{headerText}</h2>
+      <div className={`Demo__item ${alignmentClass}`}>
+
         <div className="Demo__item__content">
           {/* Link to the demo page wraps the icon/media */}
-          
+
           <div className="Demo__item__With__Icons">
-         
-            <Link className="Demo__item__link" href={path || "/"}>
+
+            {/* The link's only content is a video, which carries no accessible
+                name, so name the link after the demo it opens. */}
+            <Link
+              className="Demo__item__link"
+              href={path || "/"}
+              aria-label={`${headerText} demo`}
+            >
               {/* Display the media/icon for the demo */}
               {icon}
             </Link>
@@ -45,10 +52,10 @@ const DemoIcon = ({index, icon, path, headerText, footerText, demoLabel,
         
               {/* Footer text describing the demo */}
           <div className="Demo__item__text">{footerText}</div>
-        
+
         </div>
 
-      </li>
+      </div>
     </div>
   );
 };

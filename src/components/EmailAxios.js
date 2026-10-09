@@ -66,6 +66,12 @@ const EmailSender = (
   return (
     <>
       <section className="footer-subscription">
+        {/* Always present so the change is announced; a node that appears for
+            the first time is not observed by screen readers. */}
+        <p className="visually-hidden" role="status" aria-live="polite">
+          {status === "OK" ? "Thank you! A copy has been sent." : ""}
+        </p>
+
         {status === "OK" ? (
           <>
             <div className="lets-chat-button">
@@ -100,23 +106,31 @@ const EmailSender = (
             <p className="thin-gradient-line"> {footer}</p>
 
             <div className="footer-subscription-input">
+              <label className="visually-hidden" htmlFor="subscribe-email">
+                Your email address
+              </label>
               <input
+                id="subscribe-email"
+                name="email"
                 className="input--resume"
-                type="Email"
+                type="email"
+                autoComplete="email"
                 placeholder="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={handleKeyDown}
               />
 
-              <Button
-                buttonStyle={buttonStyle}
-                buttonSize={"btn--Large"}
+              {/* A plain button, not a Button wrapped in a link. The wrapper
+                  previously pointed at "/", so activating the link instead of
+                  the inner button navigated away and discarded the address. */}
+              <button
+                type="button"
+                className="btn btn--outline btn--Large"
                 onClick={sendEmail}
-                linkTo="/"
               >
-                {(buttonText = "Send It Now")}
-              </Button>
+                Send It Now
+              </button>
             </div>
           </>
         )}

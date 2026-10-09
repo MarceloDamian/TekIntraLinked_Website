@@ -1,5 +1,6 @@
 // Import useLayoutEffect to manage scroll and BottomFooter component
 import React, {useLayoutEffect} from 'react';
+import Head from 'next/head';
 import BottomFooter from "../../src/components/BottomFooter";
 
 import techData from '../../src/components/techData';
@@ -21,6 +22,9 @@ export default function SecondDemo() {
 
   return (
     <>
+    <Head>
+      <title>ParkerUp | TekIntraLinked</title>
+    </Head>
     <div className='SecondDemo_'>
       {/* Title and subtitle describing ParkerUp */}
       <div className="TitleContainer">
@@ -34,14 +38,14 @@ export default function SecondDemo() {
       <div className="VideoContainer">
 
           <div className="FirstClip">
-            <video  autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+            <video aria-label="ParkerUp app demo, first clip"  autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
               <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/FirstClip.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
           </div>
 
             <div className="SecondClip">
-              <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+              <video aria-label="ParkerUp app demo, second clip" autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
                 <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/SecondClip.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
@@ -52,7 +56,7 @@ export default function SecondDemo() {
             href="https://github.com/MarceloDamian/TekIntraLinked_Website"
           >                
             <div className="terminal-typing">
-              VIEW CODE
+              VIEW CODE<span className="visually-hidden"> for TekIntraLinked_Website</span>
             </div>  
           </a>     
         </div>
@@ -64,14 +68,14 @@ export default function SecondDemo() {
         
         <div className='MVPPhotoContainer'>
           
-          <img className='MVPPhoto' src="/images/MVPPhoto.webp"/>
+          <img className='MVPPhoto' src="/images/MVPPhoto.webp" alt="ParkerUp minimum viable product screenshot"/>
 
           <div className="dark-overlay">
             <a 
               href="https://github.com/MarceloDamian/ParkerUp"
             >                
                 <div className="terminal-typing">
-                  VIEW CODE
+                  VIEW CODE<span className="visually-hidden"> for ParkerUp</span>
                 </div>  
               </a>  
           </div>
@@ -87,9 +91,9 @@ export default function SecondDemo() {
 
       {/* Description of role and system design approach */}
       <div className='DemoText'>
-        <h4>Role: Founder and Full-Stack Engineer</h4>
+        <h3>Role: Founder and Full-Stack Engineer</h3>
         <br/>
-        <h5> 
+        <p className="demo-body"> 
           ParkerUp is a production-deployed iOS and Android application 
           that reduces time-to-parking by modeling real-world constraints 
           through structured mathematical logic and delivering those 
@@ -107,7 +111,7 @@ export default function SecondDemo() {
           layers allows: Integration of predictive modeling using historical 
           parking behavior, Geographic scaling across multiple urban markets, 
           and Enhanced constraint modeling (zoning, timing, availability density).
-        </h5> 
+        </p> 
       </div>
     </div>
         

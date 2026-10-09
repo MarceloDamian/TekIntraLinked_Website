@@ -26,12 +26,17 @@ buttonStyle = STYLES[0], buttonSize = SIZES[0], linkTo}) =>
   const style = getButtonStyle(buttonStyle);
   const size = getButtonSize(buttonSize);
 
+  // A link styled as a button, rather than a <button> nested inside an <a>.
+  // Nested interactive controls are invalid HTML and produce two tab stops,
+  // with screen readers announcing "link ... button" for one control.
   return (
-    <Link href={linkTo|| '/'}>
-      <button className={`btn ${style} ${size}`} onClick={onClick} type={type}>
-        {/* Render children as button content */}
-        {children}
-      </button>
+    <Link
+      href={linkTo|| '/'}
+      className={`btn ${style} ${size}`}
+      onClick={onClick}
+    >
+      {/* Render children as button content */}
+      {children}
     </Link>
   );
 };

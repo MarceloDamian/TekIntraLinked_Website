@@ -1,6 +1,7 @@
 // Import React and useState hook for state management
 import React from "react";
-import { useState } from "react";
+import Head from "next/head";
+import { useState, useRef, useEffect } from "react";
 // Import Submit button component
 import { Submit } from "../src/components/Submit";
 // Import axios for HTTP requests
@@ -20,6 +21,15 @@ function SignUp() {
 
   // State for form submission status
   const [status, setStatus] = useState(null);
+
+  // On success the form unmounts, which would drop focus to <body> and reset
+  // the screen reader's reading position. Move focus to the confirmation.
+  const successRef = useRef(null);
+  useEffect(() => {
+    if (status === 'OK' && successRef.current) {
+      successRef.current.focus();
+    }
+  }, [status]);
 
   // Handle form submit event
   const handleSubmit = async (e) => {
@@ -55,28 +65,58 @@ function SignUp() {
 
   return (
     <>
+      <Head>
+        <title>Contact | TekIntraLinked</title>
+      </Head>
       {/* Form container with background video */}
       <div className="FormtoSend">
-        <video autoPlay loop muted playsInline webkit-playsinline={true.toString()}>
+        {/* Decorative background: hidden from the accessibility tree. */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline={true.toString()}
+          aria-hidden="true"
+          tabIndex={-1}
+        >
           <source src="https://videosdirectory.s3.us-east-2.amazonaws.com/videos/BackgroundVideo1_.mp4" type="video/mp4" />
         </video>
 
-        {/* Email form with conditional success message */}
-        <form onSubmit={handleSubmit} className="emailForm">
+        {/* Email form with conditional success message. The status region is
+            always rendered so screen readers announce changes to it; swapping
+            the node in and out gives them nothing to observe. */}
+        <form onSubmit={handleSubmit} className="emailForm" aria-labelledby="contact-heading">
+          {/* h1: this form is the page's main content on both /SignUp and
+              /ContactUs, and neither page had a top-level heading. */}
+          <h1 id="contact-heading">Email Me:</h1>
+
+          <p className="visually-hidden" role="status" aria-live="polite">
+            {status === 'OK'
+              ? 'Thank you! Your message has been sent.'
+              : status === 'ERROR'
+                ? 'Please fill in all fields.'
+                : ''}
+          </p>
+
           {status === 'OK' ? (
             <div className="successMessage">
-              {/* Success message displayed after email sent */}
-              <h2>Thank you! Your message has been sent.</h2>
+              {/* Success message displayed after email sent. Focused on mount so
+                  the reading position follows the change instead of resetting. */}
+              <h3 tabIndex={-1} ref={successRef}>Thank you! Your message has been sent.</h3>
             </div>
             ) : (
               <>
                 {/* Input for name */}
                 <div className="InnerBox">
-                  <h2>Email Me:</h2>
-                  <h3>Name:</h3>
+                  <label className="field-label" htmlFor="contact-name">Name:</label>
                   <input
+                    id="contact-name"
+                    name="name"
                     className="Bubble"
                     type="text"
+                    autoComplete="name"
+                    required
                     placeholder="Your Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -85,10 +125,14 @@ function SignUp() {
 
                 {/* Input for email */}
                 <div className="InnerBox">
-                  <h3>Email:</h3>
+                  <label className="field-label" htmlFor="contact-email">Email:</label>
                   <input
+                    id="contact-email"
+                    name="email"
                     className="Bubble"
-                    type="Email"
+                    type="email"
+                    autoComplete="email"
+                    required
                     placeholder="Your Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -97,12 +141,14 @@ function SignUp() {
 
                 {/* Textarea for message */}
                 <div className="MessageBox">
-                  <h3>Message:</h3>
+                  <label className="field-label" htmlFor="contact-message">Message:</label>
                   <textarea
+                    id="contact-message"
+                    name="message"
                     cols="30"
                     rows="10"
                     className="Rectangletxtbox"
-                    type="Message"
+                    required
                     placeholder="Your Message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

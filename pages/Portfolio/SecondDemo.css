@@ -136,14 +136,16 @@
 
 }
 
-.DemoText h4
+.DemoText h4,
+.DemoText h3
 {
   color: #ffffffeb;
   font-size: 21px;
 }
 
 
-.DemoText h5
+.DemoText h5,
+.DemoText .demo-body
 {
   font-size: 18px;
   color: #ffffffeb;

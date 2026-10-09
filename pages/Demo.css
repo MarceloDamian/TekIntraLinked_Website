@@ -20,7 +20,8 @@
 }
 
 
-.Demo_Wrapper h1
+.Demo_Wrapper h1,
+.Demo_Wrapper h2
 {
   color: #ffffff ;
   text-align: center;
@@ -213,7 +214,8 @@
     margin-right: auto;
   }
 
-  .Demo_Wrapper h1
+  .Demo_Wrapper h1,
+.Demo_Wrapper h2
   {
     color: #ffffffeb;
 
@@ -351,3 +353,11 @@ h2
   margin: 0 1rem;
   border-radius: var(--border-radius);
 } */
+
+/* Card body text: was an <h4>, now a <p> for correct document structure.
+   h4 carried browser-default bold/sizing, so restate it explicitly. */
+.Demo__item__text .demo-card-text
+{
+  font-weight: bold;
+  font-size: 1em;
+}

@@ -24,8 +24,10 @@
 .FirstDemo_ h1,
 h2,
 h3,
+h3,
 h4,
 h5,
+.demo-body,
 h6 {
   color: white;
   /* font-size: 10px; */
@@ -183,13 +185,15 @@ h6 {
 
 }
 
-.FirstDemoText h4
+.FirstDemoText h4,
+.FirstDemoText h3
 {
   color: #ffffffeb;
   font-size: 27px;
 }
 
-.FirstDemoText h5
+.FirstDemoText h5,
+.FirstDemoText .demo-body
 {
   color: #ffffffeb;
   font-size: 22px;

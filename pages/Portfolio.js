@@ -1,6 +1,7 @@
 
 // Import React and useEffect hook for lifecycle management
 import React, {useEffect} from 'react';
+import Head from 'next/head';
 // Import DemoIcon component to display individual demo cards
 import DemoIcon from '../src/components/DemoIcon';
 // Import demo data array to populate portfolio sections
@@ -55,8 +56,14 @@ const Portfolio= () =>
   
   return (
     <>
+      <Head>
+        <title>Portfolio | TekIntraLinked</title>
+      </Head>
       {/* Wrapper div with class 'Demo' for styling */}
       <div className='Demo'>
+        {/* The page had no top-level heading and jumped straight to the demo
+            cards. Visually hidden so the layout is unchanged. */}
+        <h1 className="visually-hidden">Portfolio</h1>
         {/* <div className='Demo__container'> */}
             {/* Render portfolio sections with demo data */}
             <PortfolioSections FullSet={DemoData} />

@@ -1,5 +1,6 @@
 // Import useLayoutEffect to manage scroll and BottomFooter component
 import React,{useLayoutEffect} from 'react';
+import Head from 'next/head';
 import BottomFooter from '../../src/components/BottomFooter';
 import Link from "next/link";
 
@@ -25,6 +26,9 @@ export default function FirstDemo() {
 
   return (
     <>
+    <Head>
+      <title>TekIntraLinked Demo | TekIntraLinked</title>
+    </Head>
       <div className="FirstDemo_">
         {/* Title and mission statement */}
         <div className="Title-Container">
@@ -49,7 +53,7 @@ export default function FirstDemo() {
                 href="https://github.com/MarceloDamian/TekIntraLinked_Website"
               >
                 <div className="terminal-typing">
-                  VIEW CODE
+                  VIEW CODE<span className="visually-hidden"> for TekIntraLinked_Website</span>
                 </div>   
               </a>  
             </div> 
@@ -72,7 +76,7 @@ export default function FirstDemo() {
                 href="https://github.com/MarceloDamian/TekIntraLinked_Website"
               >                
                 <div className="terminal-typing">
-                  VIEW CODE
+                  VIEW CODE<span className="visually-hidden"> for TekIntraLinked_Website</span>
                 </div>  
               </a>  
             </div> 
@@ -91,9 +95,9 @@ export default function FirstDemo() {
 
 
           <br />
-          <h4>Role: Lead Software Engineer</h4>
+          <h3>Role: Lead Software Engineer</h3>
           <br />
-          <h5>
+          <p className="demo-body">
             Tekintralinked functions as both a holding company for future
             projects and a portfolio of engineered projects. Ability is not
             discussed it's shown. I developed this company website to transform
@@ -104,7 +108,7 @@ export default function FirstDemo() {
             it as a living, evolving proof of skill. New Projects will live
             under the same infrastructure this architecture supports expansion
             without rewrites.
-          </h5>
+          </p>
         </div>
       </div>
 

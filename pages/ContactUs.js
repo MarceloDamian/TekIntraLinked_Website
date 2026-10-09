@@ -1,5 +1,6 @@
 // Import React and useEffect hook
 import React, {useEffect} from 'react';
+import Head from 'next/head';
 // Import SignUp page component
 import SignUp from '../pages/SignUp';
 // Import BottomFooter component
@@ -18,6 +19,9 @@ const ContactUs = () =>
 
   return (
     <>
+    <Head>
+      <title>Contact | TekIntraLinked</title>
+    </Head>
       {/* Render SignUp component */}
       <SignUp/>
       {/* Render BottomFooter component */}

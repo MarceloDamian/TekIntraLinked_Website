@@ -3,6 +3,7 @@
 
 // Import useLayoutEffect to scroll to top on mount and BottomFooter component
 import React,{useLayoutEffect} from 'react';
+import Head from 'next/head';
 import BottomFooter from "../../src/components/BottomFooter";
 
 import techData from '../../src/components/techData';
@@ -25,6 +26,9 @@ export default function ThirdDemo()
 
   return (
     <>
+    <Head>
+      <title>AI/ML Image Classifier | TekIntraLinked</title>
+    </Head>
     <div className = "ThirdDemo_">
       {/* Title and subtitle describing project scope and approach */}
       <div className='Title_Container'>
@@ -44,7 +48,7 @@ export default function ThirdDemo()
             href="https://github.com/MarceloDamian/MLNeuralNetwork"
           >                
             <div className="terminal-typing">
-              VIEW CODE
+              VIEW CODE<span className="visually-hidden"> for MLNeuralNetwork</span>
             </div>  
           </a>     
         </div>
@@ -65,7 +69,7 @@ export default function ThirdDemo()
               href="https://github.com/MarceloDamian/TekIntraLinked_Website"
             >                
               <div className="terminal-typing">
-                VIEW CODE
+                VIEW CODE<span className="visually-hidden"> for TekIntraLinked_Website</span>
               </div>  
             </a>    
           </div>
@@ -79,16 +83,16 @@ export default function ThirdDemo()
 
       {/* Descriptive text about role and project objectives */}
       <div className="Demo_Text">
-        <h4> Role: Machine Learning Engineer </h4>
+        <h3> Role: Machine Learning Engineer </h3>
         <br/>
-        <h5> 
+        <p className="demo-body"> 
           A production-grade neural network built entirely from scratch to master 
           the mechanics of machine learning — not abstract them away.
           No frameworks. No shortcuts. I had full control over the math, the 
           gradients, and the optimization pipeline.
-        </h5> 
+        </p> 
         <br/>
-        <h5> 
+        <p className="demo-body"> 
           This project was engineered to demonstrate deep mechanical 
           understanding of neural network training dynamics, numerical 
           stability, and optimization strategy. The architecture supports
@@ -100,7 +104,7 @@ export default function ThirdDemo()
           abstractions, rebuild them under direct control, validate 
           correctness end-to-end, and ship software that proves 
           competence through execution.
-        </h5> 
+        </p> 
       </div>
 
     </div>

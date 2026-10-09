@@ -96,14 +96,16 @@
 }
 
 
-.Demo_Text h4
+.Demo_Text h4,
+.Demo_Text h3
 {
   color: #ffffffeb;
   font-size: 24px;
   margin-top:1cm;
 }
 
-.Demo_Text h5
+.Demo_Text h5,
+.Demo_Text .demo-body
 {
   font-size: 19px;
   color: #ffffffeb;

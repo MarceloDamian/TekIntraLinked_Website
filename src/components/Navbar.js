@@ -18,46 +18,66 @@ function Navbar({ click, setClick}) {
 
   // Render navbar with logo and menu links
   return (
-    <nav className={`navbar ${isContactPage ? "navbar-contact" : ""} `}>
+    <nav
+      className={`navbar ${isContactPage ? "navbar-contact" : ""} `}
+      aria-label="Main"
+    >
       <div>
-        {/* Clicking the logo navigates home and closes mobile menu */}
+        {/* The logo is this link's only content, so its alt text has to name the
+            destination rather than describe the picture. */}
         <Link href="/" onClick={closeMobileMenu}>
             <img
               src={"/images/TekIntraLinked-Logo-Only.png"}
-              alt="Logo"
+              alt="TekIntraLinked home"
               className="Tekintralinked-Logo-Only"
             />
         </Link>
 
-        {/* Hamburger icon for mobile menu toggle */}
-        <div className="menu-icon" onClick={handleClick}>
-          {click ? "": <FaBars size={45} color="#c2d0e1ff" />}
-        </div>
+        {/* A real button, so it is focusable and operable by keyboard. It was a
+            bare <div onClick>, which left the menu unreachable below 535px. */}
+        <button
+          type="button"
+          className="menu-icon"
+          onClick={handleClick}
+          aria-expanded={click}
+          aria-controls="primary-navigation"
+          aria-label={click ? "Close menu" : "Open menu"}
+        >
+          {click
+            ? <FaTimes aria-hidden="true" />
+            : <FaBars size={45} color="#c2d0e1ff" aria-hidden="true" />}
+        </button>
 
-        {/* Mobile/desktop nav menu list */}
-        <li className={click ? "nav-menu active" : "nav-menu" }>
-          {/* Close icon inside mobile menu */}
-          <div className="menu-icon" onClick={closeMobileMenu}>
-            {click ? <FaTimes />  : ""}
-          </div>
-
+        {/* Mobile/desktop nav menu list. A <ul> so the items are a real list;
+            the <li> used to be an orphan, which breaks list navigation. */}
+        <ul
+          id="primary-navigation"
+          className={click ? "nav-menu active" : "nav-menu" }
+        >
           {/* Main navigation links */}
-          <Link href="/" className="nav-links" onClick={closeMobileMenu}>
-            HOME
-          </Link>
-          <Link href="/Portfolio" className="nav-links" onClick={closeMobileMenu}>
-            PORTFOLIO
-          </Link>
-          {/* Downloadable resume link */}
-          <a
-            href="/ErickCabreraResume_.pdf"
-            download="ErickCabreraResume_.pdf"
-            className="nav-links"
-            onClick={closeMobileMenu}
-          >
-            RESUME
-          </a>
-        </li>
+          <li>
+            <Link href="/" className="nav-links" onClick={closeMobileMenu}>
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link href="/Portfolio" className="nav-links" onClick={closeMobileMenu}>
+              PORTFOLIO
+            </Link>
+          </li>
+          {/* Downloadable resume link; the type is spoken so nobody is
+              surprised by a download. */}
+          <li>
+            <a
+              href="/ErickCabreraResume_.pdf"
+              download="ErickCabreraResume_.pdf"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              RESUME<span className="visually-hidden"> (downloads a PDF)</span>
+            </a>
+          </li>
+        </ul>
 
         {/* Placeholder for potential future sign-up button */}
         {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
